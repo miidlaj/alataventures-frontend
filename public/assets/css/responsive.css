@@ -1,0 +1,2343 @@
+
+@media only screen and (max-width: 5000px){
+.boxed_wrapper_box_page{
+    overflow-x: hidden;
+}
+      
+
+}
+
+
+/* Large Layout: 1200px. */
+@media only screen and (min-width: 1200px){
+
+    
+ 
+    
+}
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1220px) { 
+/*** Main Header Css ***/        
+.header-top-left {
+    max-width: 385px;
+}    
+.header-top-middle {
+    max-width: 385px;
+}    
+.header-top-right {
+    max-width: 380px;
+}
+    
+    
+    
+}
+
+
+/* Medium screen  */ 
+@media only screen and (min-width: 992px) and (max-width: 1199px) { 
+ 
+/*** Main Header Css ***/     
+.header-top-left {
+    max-width: 340px;
+}
+.header-top-middle {
+    max-width: 200px;
+}  
+.header-top-right {
+    max-width: 320px;
+}
+.header-contact-info ul li {
+    margin-right: 50px;
+}  
+
+/*** Main Slider Css ***/         
+.main-slider .auto-container {
+    padding: 0px 50px;
+}
+
+/*** About Style1 Area Css ***/
+.about-style1-area .shape {
+    left: -100px;
+    bottom: 25px;
+}    
+.about-style1-image-box {
+    max-width: 670px;
+}    
+.about-style1-text-box {
+    padding-left: 0px;
+    padding-top: 60px;
+}    
+    
+/*** Service Style2 Area Css ***/    
+.single-service-style2 .img-holder .static-content {
+    padding-left: 10px;
+}    
+.single-service-style2 .img-holder .static-content .title {
+    padding-left: 20px;
+}   
+.single-service-style2 .img-holder .static-content .title h3 {
+    font-size: 15px;
+}    
+.single-service-style2 .img-holder .static-content .icon a {
+    width: 60px;
+    height: 70px;
+    font-size: 30px;
+}        
+.single-service-style2 .overlay-content .inner-content .text-holder {
+    padding: 0px 20px 41px;
+}    
+.single-service-style2 .overlay-content .inner-content .icon {
+    padding-top: 102px;
+}    
+.single-service-style2 .overlay-content .inner-content .text-holder .title {
+    padding-left: 20px;
+}
+
+/*** Fact Counter Area Css ***/   
+.single-fact-counter {
+    max-width: 250px;
+    margin: 0 auto 50px;
+}
+ 
+/*** Latest Portfolio Area Css ***/       
+.latest-portfolio-area {
+    padding: 65px 0 120px;
+}    
+    
+/*** Testimonial Style1 Area Css ***/ 
+.testimonial-style1-title-box {
+    padding-top: 120px;
+    padding-bottom: 205px;
+}    
+.testimonial-style1-title-box:before {
+    left: -10000px;
+    right: -10000px;
+}    
+.single-vertical-carousel {
+    margin-left: 0;
+    margin-top: 40px;
+} 
+.single-vertical-carousel .prev-btn {
+    top: -215px;
+    left: 0px;
+}    
+.single-vertical-carousel .next-btn {
+    top: -215px;
+    left: 70px;
+}   
+
+/*** Footer Area Css ***/     
+.single-footer-widget .our-company-info .footer-social-links  .social-links-style1 li {
+    margin-right: 10px;
+}
+.single-footer-widget .our-company-info .footer-social-links  .social-links-style1 li:last-child {
+    margin-right: 0px;
+}    
+
+    
+    
+    
+    
+/*** Main Header Style2 Css ***/         
+.main-menu.style2 .navigation>li {
+    margin-right: 17px;
+}    
+.main-menu.style2 .navigation>li:last-child {
+    margin-right: 0px;
+}    
+.menu-right-content .outer-search-box-style1 {
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+/*** About Style2 Area Css ***/           
+.about-style2-image-box img {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+}    
+.about-style2-image-box .inner-box .image-box2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+}     
+.about-style1-text-box.style2 {
+    padding-top: 66px;
+    padding-left: 0;
+    padding-bottom: 62px;
+}    
+    
+/*** Faq Content Area Css ***/    
+.faq-content-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}    
+.faq-image-box {
+    position: static;
+    margin-top: 60px;
+}    
+
+/*** Slogan Area Css ***/       
+.slogan-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: auto;
+    padding: 30px 0 40px;
+}
+.slogan-content:before {
+    display: none;
+}    
+.slogan-content .title {
+    margin-bottom: 15px;
+}    
+
+    
+    
+    
+    
+/*** Main Header Style3 Css ***/ 
+.header-style3 {
+    background: rgba(255, 255, 255, 0.10);    
+}     
+.quote-button.style3 a {
+    padding: 0 15px;
+}    
+.menu-right-content .outer-search-box-style1.clr-white {
+    margin-left: 20px;
+    margin-right: 20px;
+}    
+
+/*** About Style1 Area Style3 Css ***/  
+.about-style1-area.style3 {
+    margin-top: 0px;
+    padding: 70px 0 120px;
+}
+.about-style3-image-box {
+    position: static;
+}    
+.about-style1-text-box.style3 {
+    padding-top: 60px;
+    padding-left: 0;
+}    
+.about-style1-text-box .title:before {
+    display: none;
+}    
+    
+/*** Latest Portfolio Style2 Area Css ***/      
+.single-portfolio-style2 .overlay-content .title-holder h3 {
+    font-size: 20px;
+    line-height: 32px;
+}    
+.single-portfolio-style2 .overlay-content .title-holder h3 br{
+    display: none;
+}    
+    
+/*** Latest Portfolio Style2 Area Css ***/ 
+.service-style1-area.style4 .title {
+    padding: 70px 0 70px;
+}    
+.service-style3-image-box {
+    position: static;
+}    
+    
+   
+    
+   
+    
+/*** Breadcrumb Area Css ***/ 
+.breadcrumb-area .title {
+    margin: 0 0 29px;
+}    
+.breadcrumb-area .title h1 {
+    font-size: 70px;
+    line-height: 80px;
+}        
+
+/*** Fact counter Area pdbottom120 Css ***/     
+.fact-counter-area.pdbottom120 {
+    padding-bottom: 66px;
+}        
+.fact-counter-area.pdtop120 {
+    padding-top: 0px;
+}    
+    
+/*** Service Imagegalley Area Css ***/      
+.top-single-service {
+    padding-bottom: 51px;
+    flex-direction: initial;
+}    
+.top-single-service .right {
+    top: 0;
+    max-width: 750px;
+    margin-top: 18px;
+}    
+.brochures-box {
+    margin-top: 35px;
+}    
+
+/*** Portfolio Pagev1 Css ***/        
+.portfolio-pagev1 {
+    padding-top: 120px;
+    padding-bottom: 0;
+}    
+
+/*** Portfolio Single Style1 Area Css ***/
+.single-portfolio-slider .slider-pager .thumb-box {
+    margin-top: 0px;
+    margin-bottom: 0;
+}    
+.single-portfolio-slider .slider-pager .thumb-box li {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto 0;
+}    
+.project-info-box {
+    margin-top: 31px;
+} 
+
+/*** Related Portfolio Css ***/    
+.related-portfolio {
+    padding: 120px 0 120px;
+}    
+   
+/*** Portfolio Single Style2 Area Css ***/    
+.inner-comment-box .single-comment-box.marlft100 {
+    margin-left: 0px;
+}    
+
+/*** Team Single Area Css ***/        
+.team-member-info-box {
+    padding-left: 0;
+    padding-top: 40px;
+}    
+
+/*** Faq content Area Faq Page Css ***/       
+.faq-content-area.faq-page {
+    padding-top: 120px;
+    padding-bottom: 112px;
+}    
+
+/*** Blog Single Area Css ***/        
+.inner-comment-box .single-comment-box .text-holder:before {
+    left: -70px;
+}    
+  
+/*** Shop Area Css ***/          
+.billing-info {
+    margin-top: 40px;
+}    
+.login-register-area .form.register {
+    position: relative;
+    display: block;
+    padding-top: 40px;
+}
+    
+    
+    
+    
+/*** Header Style4 Css ***/        
+.main-menu.style4 .navigation>li {
+    margin-right: 25px;
+} 
+.main-menu.style4 .navigation>li:last-child {
+    margin-right: 0px;
+}    
+.quote-button-style4 {
+    margin-left: 30px;
+}    
+    
+/*** About Style4 Area Css ***/       
+.about-style4-text-box {
+    padding-top: 60px;
+}    
+    
+/*** Skill Area Css ***/
+.skill-content-box {
+    padding-right: 0px;
+}    
+.progress-levels {
+    max-width: 100%;
+}    
+.skill-image-box {
+    margin-top: 50px;
+}    
+    
+/*** Portfolio Style4 Area Css ***/
+.portfolio-style4-area .fullwidth-container {
+    padding: 0 120px;
+}    
+.portfolio-style4-content {
+    margin-right: 0px;
+    margin-left: 0px;
+}    
+.portfolio-style4-content .portfolio-item-style4 {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-bottom: 30px;
+}    
+.portfolio-style4-content .portfolio-item-style4:last-child{
+    margin-bottom: 0;
+}    
+ 
+/*** Contact Style4 Area Css ***/    
+.contact-style4-content {
+    padding: 60px 50px 60px;
+    height: 100%;
+    max-width: 700px;
+}    
+.contact-style4-form {
+    padding-top: 60px;
+    padding-bottom: 120px;
+}  
+    
+/*** Footer Top Contact Area Css ***/ 
+.footer-top-contact-box4 {
+    padding: 40px 40px 40px;
+}    
+.footer-top-contact-box4 .single-box .big-icon {
+    right: 40px;
+    font-size: 90px;
+    line-height: 80px;
+}    
+.footer-top-contact-box4 .single-box.style2 .big-icon {
+    right: -20px;
+}
+    
+    
+    
+    
+/*** Header Style5 Css ***/ 
+.header-upper-left-style5 {
+    width: 210px;
+}    
+.header-upper-right-style5 {
+    max-width: 720px;
+} 
+.header-upper-right-style5 .bottom-box {
+    padding-left: 30px;
+}    
+.header-contact-info-style5 li {
+    margin-right: 20px;
+}    
+.main-menu.style5 .navigation>li {
+    margin-right: 25px;
+}    
+.main-menu.style5 .navigation>li:last-child{
+    margin-right: 0px;
+}    
+.header-contact-info-style5 li .title h5 {
+    font-size: 15px;
+    font-weight: 400;
+}
+    
+/*** Service Style6 Area Css ***/ 
+.single-service-style6 .text-holder {
+    padding: 35px 40px 35px;
+    padding-right: 30px;
+    margin-left: 0px;
+}    
+.single-service-style6 .text-holder .icon {
+    margin-bottom: 17px;
+}    
+    
+/*** About Style5 Area Css ***/ 
+.about-style5-image-box {
+    padding-left: 0px;
+}    
+.about-style5-image-box .inner {
+    max-width: 600px;
+}    
+.about-style5-text-box {
+    padding-top: 60px;
+}    
+    
+/*** Service Style7 Area Css ***/     
+.service-style7-text-box {
+    padding-top: 40px;
+}    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+}
+
+
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+ 
+/*** Main Header Css ***/        
+.header-upper {
+    padding: 30px 0 28px;
+}    
+.header-upper-left {
+    float: none !important;
+}    
+.header-upper-left .logo {
+    padding: 0px;
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 25px;
+}
+.header-upper-right {
+    float: none !important;
+}
+.header-contact-info ul li {
+    margin-right: 30px;
+} 
+    
+/*** Main Slider Css ***/   
+.main-slider.style1 {
+    margin-top: 392px;
+} 
+.main-slider.style1.box-layout {
+    margin-top: 0px;
+    padding-top: 347px;
+}    
+.main-slider .auto-container {
+    padding: 0px 50px;
+}
+  
+/*** Service Style1 Area Css ***/        
+.single-service-style1 {
+    margin: 0 auto 60px;
+}    
+    
+/*** About Style1 Area Css ***/
+.about-style1-area .shape {
+    left: -100px;
+    bottom: 25px;
+}    
+.about-style1-image-box {
+    max-width: 670px;
+}    
+.about-style1-text-box {
+    padding-left: 0px;
+    padding-top: 60px;
+}    
+        
+/*** Service Style2 Area Css ***/    
+.single-service-style2 {
+    max-width: 470px;
+    width: 100%;
+    margin: 0 auto 30px;
+}    
+.single-service-style2 .overlay-content .inner-content .icon {
+    padding-top: 232px;
+}    
+    
+/*** Fact Counter Area Css ***/   
+.single-fact-counter {
+    max-width: 250px;
+    margin: 0 auto 50px;
+}
+        
+/*** Latest Portfolio Area Css ***/       
+.latest-portfolio-area {
+    padding: 65px 0 120px;
+}    
+    
+/*** Testimonial Style1 Area Css ***/ 
+.testimonial-style1-title-box {
+    padding-top: 120px;
+    padding-bottom: 205px;
+}    
+.testimonial-style1-title-box:before {
+    left: -10000px;
+    right: -10000px;
+}    
+.single-vertical-carousel {
+    margin-left: 0;
+    margin-top: 40px;
+} 
+.single-vertical-carousel .prev-btn {
+    top: -215px;
+    left: 0px;
+}    
+.single-vertical-carousel .next-btn {
+    top: -215px;
+    left: 70px;
+}   
+
+/*** Partner Area Css ***/    
+.single-partner-logo-box {
+    flex: 0 0 50%;
+    max-width: 50%;
+}    
+        
+/*** Footer Area Css ***/      
+.single-footer-widget.margin50-0{
+    margin: 50px 0;
+}    
+
+    
+    
+ 
+ 
+/*** Main Header Style2 Css ***/
+.header-upper-style2 {
+    position: relative;
+    display: block;
+    background: rgba(255, 255, 255, 0.30);
+    padding: 0;
+}    
+.header-upper-left-style2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    float: none !important;
+    z-index: 100;
+}
+.header-upper-left-style2 .logo {
+    position: relative;
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 20px 0;
+    border: none;
+}
+.header-upper-right-style2 {
+    position: relative;
+    display: block;
+    float: none !important;
+}
+.header-upper-right-style2 .nav-outer {
+    position: relative;
+    display: block;
+    float: none;
+} 
+.menu-right-content {
+    position: absolute;
+    float: none;
+    top: 0;
+    right: 70px;
+    z-index: 100;
+}    
+.menu-right-content .outer-search-box-style1 {
+    position: static;
+    padding: 30px 0;
+    margin-left: 0px;
+    margin-right: 20px;
+    display: inline-block;
+}
+.quote-button.style2 {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 5px 0;
+    margin: 0;
+}    
+    
+/*** Main Slider Style2 Css ***/    
+.main-slider.style2 {
+    margin-top: 129px;
+}    
+.main-slider.style2 .slide {
+    padding: 242px 0px 160px;
+}    
+    
+/*** About Style2 Area Css ***/           
+.about-style2-image-box img {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+}    
+.about-style2-image-box .inner-box .image-box2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+}     
+.about-style1-text-box.style2 {
+    padding-top: 66px;
+    padding-left: 0;
+    padding-bottom: 62px;
+}    
+        
+/*** Faq Content Area Css ***/    
+.faq-content-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}    
+.faq-image-box {
+    position: static;
+    margin-top: 60px;
+}    
+        
+/*** Slogan Area Css ***/       
+.slogan-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: auto;
+    padding: 30px 0 40px;
+}
+.slogan-content:before {
+    display: none;
+}    
+.slogan-content .title {
+    margin-bottom: 15px;
+}    
+
+    
+        
+    
+    
+/*** Main Header Style3 Css ***/ 
+.header-style3 {
+    background: rgba(255, 255, 255, 0.10);    
+}      
+.quote-button.style3 a {
+    color: #ffffff;
+    background: #fd5d14;
+    line-height: 90px;
+    padding: 0 30px;
+}  
+.menu-right-content .outer-search-box-style1.clr-white {
+    margin-left: 0px;
+    margin-right: 0px;
+}    
+.quote-button.style3 {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 210px;
+    margin: 0;
+}    
+
+/*** Main Slider Style3 Css ***/     
+.main-slider.style3 .slide {
+    padding: 232px 0px 400px;
+}        
+    
+/*** About Style1 Area Style3 Css ***/  
+.about-style1-area.style3 {
+    margin-top: 0px;
+    padding: 70px 0 120px;
+}
+.about-style3-image-box {
+    position: static;
+}    
+.about-style1-text-box.style3 {
+    padding-top: 60px;
+    padding-left: 0;
+}    
+.about-style1-text-box .title:before {
+    display: none;
+}    
+    
+/*** Video Gallery Style2 Area Css ***/  
+.video-galler-outer-bg .title-holder h2 {
+    font-size: 34px;
+    line-height: 46px;
+}    
+    
+/*** Latest Portfolio Style2 Area Css ***/      
+.single-portfolio-style2 .overlay-content .title-holder h3 {
+    font-size: 20px;
+    line-height: 32px;
+}    
+.single-portfolio-style2 .overlay-content .title-holder h3 br{
+    display: none;
+}       
+    
+/*** Latest Portfolio Style2 Area Css ***/ 
+.service-style1-area.style4 .title {
+    padding: 70px 0 70px;
+}    
+.service-style3-image-box {
+    position: static;
+}
+    
+    
+    
+/*** Breadcrumb Area Css ***/ 
+.breadcrumb-area {
+    padding: 155px 0 113px;
+    margin-top: 392px;
+}  
+.breadcrumb-area .title {
+    margin: 0 0 18px;
+}    
+.breadcrumb-area .title h1 {
+    font-size: 70px;
+    line-height: 80px;
+}        
+    
+/*** Fact counter Area pdbottom120 Css ***/     
+.fact-counter-area.pdbottom120 {
+    padding-bottom: 66px;
+}        
+.fact-counter-area.pdtop120 {
+    padding-top: 0px;
+}        
+    
+/*** Service Imagegalley Area Css ***/      
+.top-single-service {
+    padding-bottom: 51px;
+    flex-direction: initial;
+}    
+.top-single-service .right {
+    top: 0;
+    max-width: 750px;
+    margin-top: 18px;
+}    
+.brochures-box {
+    margin-top: 35px;
+}    
+       
+/*** Portfolio Pagev1 Css ***/        
+.portfolio-pagev1 {
+    padding-top: 120px;
+    padding-bottom: 0;
+}        
+    
+/*** Portfolio Single Style1 Area Css ***/
+.single-portfolio-slider .slider-pager .thumb-box {
+    margin-top: 0px;
+    margin-bottom: 0;
+}    
+.single-portfolio-slider .slider-pager .thumb-box li {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto 0;
+}    
+.project-info-box {
+    margin-top: 31px;
+} 
+
+/*** Related Portfolio Css ***/    
+.related-portfolio {
+    padding: 120px 0 120px;
+}    
+   
+/*** Portfolio Single Style2 Area Css ***/    
+.inner-comment-box .single-comment-box.marlft100 {
+    margin-left: 0px;
+}            
+.portfolio-details-content-box {
+    padding: 0 0px;
+    margin-top: 3px;
+}    
+    
+/*** Team Single Area Css ***/        
+.team-member-info-box {
+    padding-left: 0;
+    padding-top: 40px;
+}    
+        
+/*** Faq content Area Faq Page Css ***/       
+.faq-content-area.faq-page {
+    padding-top: 120px;
+    padding-bottom: 112px;
+}    
+        
+/*** Blog Pagev2 Area Css ***/      
+.sidebar-wrapper {
+    margin-top: 50px;
+}    
+
+/*** Contact Form Area Css ***/       
+.contact-information-box {
+    padding-left: 0;
+    margin-top: 50px;
+}    
+    
+/*** Shop Area Css ***/       
+.single-shop-content .content-box {
+    margin-top: 40px;
+}        
+.billing-info {
+    margin-top: 40px;
+}    
+    
+.login-register-area .form.register {
+    position: relative;
+    display: block;
+    padding-top: 40px;
+}    
+.login-register-area .form .social-icon {
+    position: relative;
+    float: left;
+    margin-right: 0;
+    margin-top: 14px;
+}        
+.login-register-area .form .social-icon .login-with {
+    position: static;
+    margin: 0;
+} 
+    
+  
+    
+    
+    
+/*** Header Style4 Css ***/ 
+.header-top-style4 {
+    padding: 30px 0 30px;
+}    
+.header-top-style4 .outer-box {
+    display: none;
+}       
+.header-upper-style4 {
+    margin-top: -30px;
+}    
+.main-slider.style4 {
+    margin-top: 60px;
+}    
+.nav-outer .mobile-nav-toggler.home4{
+    padding: 30px 0;
+}
+    
+/*** Partner Style4 Area Css ***/     
+.partner-style4-area .partner-box {
+    justify-content: center;
+}    
+.partner-style4-area .partner-box .single-partner-logo-box {
+    text-align: center;
+}    
+    
+/*** About Style4 Area Css ***/       
+.about-style4-text-box {
+    padding-top: 50px;
+}       
+    
+/*** Skill Area Css ***/
+.skill-content-box {
+    padding-right: 0px;
+}    
+.progress-levels {
+    max-width: 100%;
+}    
+.skill-image-box {
+    margin-top: 50px;
+}    
+    
+/*** Portfolio Style4 Area Css ***/
+.portfolio-style4-area .fullwidth-container {
+    padding: 0 120px;
+}    
+.portfolio-style4-content {
+    margin-right: 0px;
+    margin-left: 0px;
+}    
+.portfolio-style4-content .portfolio-item-style4 {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-bottom: 30px;
+}    
+.portfolio-style4-content .portfolio-item-style4:last-child{
+    margin-bottom: 0;
+}    
+ 
+/*** Contact Style4 Area Css ***/    
+.contact-style4-content {
+    padding: 60px 50px 60px;
+    height: 100%;
+    max-width: 700px;
+}    
+.contact-style4-form {
+    padding-top: 60px;
+    padding-bottom: 120px;
+}  
+  
+/*** Footer Top Contact Area Css ***/ 
+.footer-top-contact-box4 {
+    padding: 51px 20px 11px;
+}
+.footer-top-contact-box4:before {
+    display: none;
+}    
+.footer-top-contact-box4 .single-box {
+    width: 100%;
+    float: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    text-align: center;
+}   
+.footer-top-contact-box4 .single-box.style2 {
+    padding-left: 0px;
+}    
+.footer-top-contact-box4 .single-box .big-icon {
+    display: none;
+}    
+.footer-top-contact-box4 .single-box .icon {
+    margin-bottom: 17px;
+}    
+.footer-top-contact-box4 .single-box .title p {
+    margin: 0px 0px 5px;
+}    
+ 
+    
+    
+    
+    
+/*** Header Style5 Css ***/
+.header-top-style5 {
+    padding: 30px 0 30px;
+}    
+.header-top-style5 .outer-box {
+    display: none;
+} 
+.header-upper-left-style5 .logo {
+    padding: 20px 0;
+}       
+.header-upper-right-style5 .top-box {
+    display: none;
+}    
+.header-upper-right-style5 {
+    max-width: 435px;
+}    
+.header-upper-right-style5 .bottom-box {
+    padding-left: 30px;
+}    
+.quote-button-style5 a {
+    padding: 0 40px;
+    line-height: 90px;
+} 
+    
+/*** Service Style6 Area Css ***/ 
+.single-service-style6 .text-holder {
+    padding: 35px 40px 35px;
+    padding-right: 30px;
+    margin-left: 0px;
+}    
+.single-service-style6 .text-holder .icon {
+    margin-bottom: 17px;
+}    
+    
+/*** About Style5 Area Css ***/ 
+.about-style5-image-box {
+    padding-left: 0px;
+}    
+.about-style5-image-box .inner {
+    max-width: 600px;
+}    
+.about-style5-text-box {
+    padding-top: 60px;
+}    
+  
+/*** Service Style7 Area Css ***/     
+.service-style7-text-box {
+    padding-top: 40px;
+}    
+ 
+    
+/*** Main Slider Style4 Css ***/
+.main-slider.style4 .slide {
+    padding: 247px 0px 180px;
+}    
+.main-slider.style4 .content h2 {
+    font-size: 52px;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin-top: 23px;
+    margin-bottom: 47px;
+}    
+    
+/*** Main Slider Style4 Home5 Css ***/    
+.main-slider.style4.home5 .slide {
+    padding: 237px 0px 180px;
+}    
+    
+    
+   
+    
+    
+    
+    
+    
+    
+ 
+    
+}
+
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+    
+.sec-title {
+    padding-bottom: 46px;
+}    
+.sec-title p br{
+    display: none;
+} 
+.sec-title .big-title {
+    padding: 19px 0 0;
+}    
+.sec-title .big-title h1 {
+    font-size: 40px;
+    line-height: 50px;
+}  
+.sec-title .big-title h1 br{
+    display: none;
+}   
+   
+    
+/*** Main Header Css ***/
+.header-upper {
+    padding: 30px 0;
+}    
+.header-upper-left {
+    float: none !important;
+}    
+.header-upper-left .logo {
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+}  
+.header-contact-info {
+    display: none;
+}    
+.outer-search-box-style1 {
+    display: none;
+}    
+    
+/*** Main Slider Css ***/   
+.main-slider.style1 {
+    margin-top: 284px;
+}
+.main-slider.style1.box-layout {
+    margin-top: 0px;
+    padding-top: 239px;
+}    
+.main-slider .auto-container {
+    padding: 0px 30px;
+}    
+.main-slider .content h2 {
+    font-size: 42px;
+    line-height: 1.0em;
+    margin-bottom: 36px;
+}    
+.main-slider .content h3 {
+    font-size: 18px;
+    line-height: 1.0em;
+}
+.main-slider .content h3:before {
+    left: 35px;
+    bottom: 6px;
+    right: 35px;
+    height: 3px;
+}    
+.main-slider .content h3 img {
+    padding-right: 10px;
+}  
+.main-slider .content .text {
+    margin-top: 23px;
+    margin-bottom: 40px;
+    max-width: 400px;
+}    
+.main-slider .content .btns-box {
+    max-width: 270px;
+    width: 100%;
+}  
+.main-slider .content .btns-box .btn-one {
+    margin-left: 0;
+    margin-top: 10px;
+} 
+.main-slider .owl-theme .owl-dots {
+    right: 20px;
+} 
+    
+/*** Service Style1 Area Css ***/ 
+.service-style1-area .title h1 br{
+    display: none;
+}    
+.single-service-style1 {
+    margin: 0 auto 60px;
+}    
+       
+/*** About Style1 Area Css ***/
+.about-style1-area .shape {
+    left: -170px;
+    bottom: 60px;
+}  
+.about-style1-image-box {
+    max-width: 320px;
+    margin: 0 auto;
+} 
+.about-style1-image-box .image-box1 {
+    width: 300px;
+}    
+.about-style1-text-box {
+    padding-left: 0px;
+    padding-top: 60px;
+}    
+.about-style1-text-box .title:before {
+    display: none;
+} 
+.about-style1-text-box .title h1 {
+    font-size: 50px;
+    line-height: 58px;
+    font-weight: 600;
+    margin: 17px 0 0;
+}    
+.about-style1-text-box .title h1 br{
+    display: none;
+}    
+
+/*** Service Style2 Area Css ***/    
+.single-service-style2 {
+    max-width: 370px;
+    width: 100%;
+    margin: 0 auto 30px;
+} 
+.single-service-style2 .img-holder .static-content {
+    padding-left: 15px;
+}  
+.single-service-style2 .img-holder .static-content .title {
+    padding-left: 20px;
+}
+.single-service-style2 .img-holder .static-content .title h3 {
+    font-size: 15px;
+}       
+.single-service-style2 .img-holder .static-content .icon a {
+    width: 60px;
+    font-size: 30px;
+} 
+.single-service-style2 .overlay-content .inner-content .text-holder {
+    padding: 0px 20px 41px;
+}    
+.single-service-style2 .overlay-content .inner-content .icon {
+    padding-top: 102px;
+}     
+.single-service-style2 .overlay-content .inner-content .text-holder .title {
+    padding-left: 20px;
+}    
+    
+/*** Fact Counter Area Css ***/   
+.single-fact-counter {
+    max-width: 250px;
+    margin: 0 auto 50px;
+}
+    
+/*** Latest Portfolio Area Css ***/       
+.latest-portfolio-area {
+    padding: 65px 0 120px;
+} 
+.project-filter {
+    padding: 21px 0 2px;
+}    
+.project-filter li {
+    margin: 0 15px 20px;
+}        
+    
+/*** Testimonial Style1 Area Css ***/ 
+.testimonial-style1-title-box {
+    padding-top: 120px;
+    padding-bottom: 205px;
+}    
+.testimonial-style1-title-box:before {
+    left: -10000px;
+    right: -10000px;
+}  
+.testimonial-style1-title-box .sec-title .big-title h1 {
+    font-size: 50px;
+    line-height: 62px;
+}    
+.single-vertical-carousel {
+    margin-left: 0;
+    margin-top: 40px;
+} 
+.single-vertical-carousel .prev-btn {
+    top: -215px;
+    left: 0px;
+}    
+.single-vertical-carousel .next-btn {
+    top: -215px;
+    left: 70px;
+}   
+
+/*** Partner Area Css ***/    
+.single-partner-logo-box {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}   
+        
+/*** Footer Area Css ***/      
+.single-footer-widget.margin50-0{
+    margin: 50px 0;
+}    
+.footer-bottom .outer-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}        
+.copyright-text {
+    padding: 20px 0;
+    padding-right: 0px;
+    width: 100%;
+}
+.footer-menu {
+    padding: 24px 0 26px;
+}    
+    
+    
+    
+    
+    
+/*** Main Header Style2 Css ***/
+.header-upper-style2 {
+    position: relative;
+    display: block;
+    background: rgba(255, 255, 255, 0.40);
+    padding: 0;
+}    
+.header-upper-left-style2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    float: none !important;
+    z-index: 100;
+}
+.header-upper-left-style2 .logo {
+    position: relative;
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 20px 0;
+    border: none;
+}
+.header-upper-right-style2 {
+    position: relative;
+    display: block;
+    float: none !important;
+}
+.header-upper-right-style2 .nav-outer {
+    position: relative;
+    display: block;
+    float: none;
+} 
+.menu-right-content {
+    position: absolute;
+    float: none;
+    top: 0;
+    right: 70px;
+    z-index: 100;
+    display: none;
+}    
+.menu-right-content .outer-search-box-style1 {
+    position: static;
+    padding: 30px 0;
+    margin-left: 0px;
+    margin-right: 20px;
+    display: inline-block;
+}
+.quote-button.style2 {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 5px 0;
+    margin: 0;
+}    
+    
+/*** Main Slider Style2 Css ***/    
+.main-slider.style2 {
+    margin-top: 129px;
+}    
+.main-slider.style2 .slide {
+    padding: 246px 0px 160px;
+}            
+   
+/*** About Style2 Area Css ***/
+.about-style2-area {
+    padding-top: 120px;
+}    
+.about-style2-image-box img {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+}  
+.about-style2-image-box .inner-box {
+    position: static;
+}  
+.about-style2-image-box .inner-box .image-box1 {
+    position: relative;
+    display: block;
+}  
+.about-style2-image-box .inner-box .image-box1:before {
+    display: none;
+}
+.about-style2-image-box .inner-box .image-box1:after {
+    display: none;
+}    
+.about-style2-image-box .inner-box .image-box2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}     
+.about-style1-text-box.style2 {
+    padding-top: 66px;
+    padding-left: 0;
+    padding-bottom: 63px;
+}    
+        
+/*** Service Style3 Area Css ***/
+.service-style3-area .sec-title {
+    padding-bottom: 154px;
+    text-align: center;
+}    
+.service-carousel.owl-nav-style-one.owl-theme .owl-nav {
+    top: -120px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}    
+.single-service-style3 .overlay-content .title-holder h3 {
+    font-size: 20px;
+    line-height: 32px;
+}    
+.single-service-style3 .overlay-content .title-holder h3 br{
+    display: none;
+}    
+ 
+/*** Testimonial Style2 Area Css ***/    
+.testimonial-carousel {
+    padding: 0 10px;
+}    
+.owl-carousel.owl-dot-style1 .owl-dots .owl-dot {
+    margin: 0px 5px 5px;
+}    
+
+/*** Faq Content Area Css ***/    
+.faq-content-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}    
+.faq-image-box {
+    position: static;
+    margin-top: 60px;
+}    
+        
+/*** Slogan Area Css ***/       
+.slogan-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: auto;
+    padding: 30px 0 40px;
+}
+.slogan-content:before {
+    display: none;
+}    
+.slogan-content .title {
+    margin-bottom: 15px;
+}    
+    
+        
+
+
+    
+/*** Main Header Style3 Css ***/    
+.header-style3 {
+    background: rgba(255, 255, 255, 0.10);    
+}      
+/*** Main Slider Style3 Css ***/     
+.main-slider.style3 .slide {
+    padding: 232px 0px 400px;
+}        
+.main-slider.style3 .content .btns-box {
+    margin-top: 42px;
+}        
+.main-slider.style3 .video-holder-box-style4 {
+    bottom: 300px;
+}    
+    
+/*** About Style1 Area Style3 Css ***/  
+.about-style1-area.style3 {
+    margin-top: 0px;
+    padding: 70px 0 120px;
+}
+.about-style3-image-box {
+    position: static;
+}    
+.about-style1-text-box.style3 {
+    padding-top: 60px;
+    padding-left: 0;
+}    
+.about-style1-text-box .title:before {
+    display: none;
+}    
+    
+/*** Video Gallery Style2 Area Css ***/
+.video-galler-outer-bg .title-holder {
+    max-width: 300px;
+    width: 100%;
+    margin: -9px auto 0;
+}    
+.video-galler-outer-bg .title-holder h2 {
+    font-size: 24px;
+    line-height: 36px;
+}    
+.video-galler-outer-bg .title-holder h2 br{
+    display: none;
+}            
+
+/*** Latest Portfolio Style2 Area Css ***/ 
+.latest-portfolio-style2-area .sec-title {
+    padding-bottom: 154px;
+    text-align: center;
+}    
+.single-portfolio-style2 .overlay-content .title-holder h3 {
+    font-size: 20px;
+    line-height: 32px;
+}    
+.single-portfolio-style2 .overlay-content .title-holder h3 br{
+    display: none;
+}       
+.portfolio-carousel.owl-nav-style-one.owl-theme .owl-nav {
+    position: absolute;
+    top: -120px;
+    text-align: center;
+}    
+    
+/*** Latest Portfolio Style2 Area Css ***/ 
+.service-style1-area.style4 .title {
+    padding: 70px 0 70px;
+}    
+.service-style3-image-box {
+    position: static;
+}
+    
+    
+    
+    
+    
+/*** Breadcrumb Area Css ***/ 
+.breadcrumb-area {
+    padding: 155px 0 113px;
+    margin-top: 284px;
+}
+.breadcrumb-area .title {
+    margin: 0 0 21px;
+}    
+.breadcrumb-area .title h1 {
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 600;
+}      
+        
+/*** Fact counter Area pdbottom120 Css ***/     
+.fact-counter-area.pdbottom120 {
+    padding-bottom: 66px;
+}        
+.fact-counter-area.pdtop120 {
+    padding-top: 0px;
+}        
+    
+/*** Service Imagegalley Area Css ***/      
+.top-single-service {
+    padding-bottom: 51px;
+    flex-direction: initial;
+}  
+.top-single-service .left {
+    padding-left: 0;
+} 
+.top-single-service .left .icon {
+    position: static;
+    top: 0;
+    margin-bottom: 20px;
+}  
+.top-single-service .left h2 br {
+    display: none;
+}    
+.top-single-service .right {
+    top: 0;
+    max-width: 750px;
+    margin-top: 18px;
+}  
+.single-service-text-box {
+    padding: 41px 30px 0;
+}      
+.brochures-box {
+    margin-top: 35px;
+}    
+   
+/*** Portfolio Pagev1 Css ***/        
+.portfolio-pagev1 {
+    padding-top: 120px;
+    padding-bottom: 0;
+}        
+ 
+/*** Portfolio Pagev2 Css ***/ 
+.portfolio-pagev2 {
+    padding-top: 106px;
+    padding-bottom: 0;
+}    
+.portfolio-pagev2 .top-box {
+    padding-bottom: 70px;
+    display: block;
+}    
+.portfolio-pagev2 .top-box .styled-pagination {
+    margin: 38px 0 0;
+}    
+    
+/*** Portfolio Single Style1 Area Css ***/
+.single-portfolio-slider .slider-pager .thumb-box {
+    margin-top: 0px;
+    margin-bottom: 0;
+}    
+.single-portfolio-slider .slider-pager .thumb-box li {
+    max-width: 300px;
+    width: 100%;
+    margin: 20px auto 0;
+}    
+.project-info-box {
+    margin-top: 31px;
+} 
+
+/*** Related Portfolio Css ***/    
+.related-portfolio {
+    padding: 120px 0 120px;
+}    
+   
+/*** Portfolio Single Style2 Area Css ***/ 
+.inner-comment-box .single-comment-box {
+    min-height: 178px;
+    padding-left: 0px;
+    margin-bottom: 50px;
+}   
+.inner-comment-box .single-comment-box .img-holder {
+    position: static;
+    width: 80px;
+    height: 80px;
+}    
+.inner-comment-box .single-comment-box.marlft100 {
+    margin-left: 0px;
+}
+.inner-comment-box .single-comment-box .text-holder {
+    padding: 28px 0 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}    
+.inner-comment-box .single-comment-box .text-holder:before {
+    display: none;
+}    
+.portfolio-details-content-box {
+    padding: 0 0px;
+    margin-top: 3px;
+}    
+.project-info-box.style2 {
+    padding: 46px 30px 26px;
+    padding-right: 30px;
+}            
+    
+/*** Team Single Area Css ***/        
+.team-member-info-box {
+    padding-left: 0;
+    padding-top: 40px;
+}  
+
+/*** Testimonial Page Area Css ***/          
+.testimonial-page-box {
+    padding: 0 0px;
+}    
+        
+/*** Faq content Area Faq Page Css ***/       
+.faq-content-area.faq-page {
+    padding-top: 120px;
+    padding-bottom: 112px;
+}    
+             
+/*** Blog Pagev2 Area Css ***/      
+.sidebar-wrapper {
+    margin-top: 50px;
+} 
+.blog-single-area .sidebar-wrapper {
+    margin-top: 100px;
+}   
+.single-blog-post-style3.withbdr {
+    margin-bottom: 50px;
+    border: 0px solid #fd5d14;
+    padding: 0 0px 0px;
+}    
+.single-blog-post-style3 .quote-box {
+    min-height: 130px;
+    padding-top: 5px;
+}    
+.single-blog-post-style3 .audio-gallery {
+    display: block;
+}    
+.single-blog-post-style3 .audio-gallery .audio-content {
+    padding-left: 0;
+    margin-top: 20px;
+}    
+.blog-single-quote-box h2 {
+    font-size: 20px;
+    line-height: 32px;
+}       
+
+/*** Contact Form Area Css ***/       
+.contact-information-box {
+    padding-left: 0;
+    margin-top: 50px;
+}    
+    
+/*** google map Area Css ***/     
+.google-map-area .map-outer .map-canvas {
+    height: 480px;
+} 
+    
+/*** Shop Area Css ***/ 
+.showing-result-shorting-box.pdbottom70 {
+    padding-bottom: 40px;
+}
+.showing-result-shorting-box.pdtop30 {
+    padding-top: 0px;
+}    
+.view-as-box {
+    float: none;
+}    
+.shorting-box {
+    float: none;
+    margin: 7px 0px 15px;
+    width: 100%;
+} 
+.showing-box {
+    float: none;
+    width: 100%;
+}    
+.shop-pagination-box {
+    float: none;
+    margin-top: 15px;
+}    
+     
+.single-shop-content .content-box {
+    margin-top: 40px;
+}  
+.single-product-image-holder .slider-pager {
+    max-width: 260px;
+    width: 100%;
+    padding: 0 32px;
+    margin: 0 auto;
+} 
+.product-tab-box {
+    padding: 50px 20px 50px;
+}    
+.product-tab-box .tab-btns .tab-btn {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}    
+.review-box-holder .single-review-box {
+    padding-left: 0px;
+}    
+.review-box-holder .single-review-box .image-holder {
+    position: static;
+    width: 70px;
+    margin-bottom: 20px;
+}    
+.review-box-holder .single-review-box .text-holder {
+    padding-left: 0;
+}    
+
+.cart-button .button-left {
+    float: none;
+    text-align: center;
+}    
+.cart-button .button-right {
+    float: none;
+    text-align: center;    
+}    
+ 
+.buyer-info .form-box {
+    padding: 50px 20px 30px;
+}    
+.billing-info {
+    margin-top: 40px;
+}    
+.billing-info .inner-box {
+    padding: 46px 20px 45px;
+}        
+.billing-info .inner-box ul li span {
+    padding-left: 30px;
+}    
+.payment-info .inner-box {
+    padding: 42px 20px 30px;
+}    
+    
+.login-register-area .form.register {
+    position: relative;
+    display: block;
+    padding-top: 40px;
+}    
+.login-register-area .form .social-icon {
+    position: relative;
+    float: left;
+    margin-right: 0;
+    margin-top: 14px;
+}        
+.login-register-area .form .social-icon .login-with {
+    position: static;
+    margin: 0;
+}    
+.login-register-area .form .right {
+    text-align: left;
+    margin: 14px 0 0;
+}        
+ 
+    
+/*** Main Shop Area elemp1 Css ***/
+.main-shop-area.elemp1 .sec-title {
+    padding-bottom: 154px;
+    text-align: center;
+}    
+.shop-carousel.owl-nav-style-one.owl-theme .owl-nav {
+    top: -120px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}    
+
+    
+
+/*** Header Style4 Css ***/ 
+.header-top-style4 {
+    padding: 30px 0 30px;
+}    
+.header-top-style4 .outer-box {
+    display: none;
+}       
+.header-upper-style4 {
+    margin-top: -30px;
+}    
+.main-slider.style4 {
+    margin-top: 60px;
+}    
+.nav-outer .mobile-nav-toggler.home4{
+    padding: 30px 0;
+}
+.quote-button-style4 {
+    display: none;
+}        
+    
+   
+/*** Service Style4 Area Css ***/     
+.service-style4-area .title h1 br {
+    display: none;
+}    
+    
+/*** About Style4 Area Css ***/
+.about-style4-image-box {
+    padding-left: 10px;
+}
+.about-style4-image-box .experience-box {
+    bottom: 45px;
+    padding: 51px 25px 23px;
+}    
+.about-style4-text-box {
+    padding-top: 50px;
+}       
+    
+/*** Skill Area Css ***/
+.skill-content-box {
+    padding-right: 0px;
+}    
+.progress-levels {
+    max-width: 100%;
+}    
+.skill-image-box {
+    margin-top: 50px;
+}    
+  
+/*** Portfolio Style4 Area Css ***/
+.portfolio-style4-area .fullwidth-container {
+    padding: 0 20px;
+}    
+.portfolio-style4-content {
+    margin-right: 0px;
+    margin-left: 0px;
+}    
+.portfolio-style4-content .portfolio-item-style4 {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+}    
+.portfolio-style4-content .portfolio-item-style4:last-child{
+    margin-bottom: 0;
+}    
+.portfolio-item-style4-content {
+    height: 400px;
+}        
+.portfolio-item-style4-content .title-holder {
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    padding: 26px 20px 27px;
+}    
+   
+/*** Contact Style4 Area Css ***/    
+.contact-style4-content {
+    padding: 60px 30px 60px;
+    height: 100%;
+    max-width: 700px;
+} 
+.contact-style4-content .sec-title {
+    padding-bottom: 34px;
+}     
+.contact-style4-content .inner ul li {
+    padding-left: 0px;
+    margin-bottom: 30px;
+}    
+.contact-style4-content .inner ul li .icon {
+    position: relative;
+    top: 0px;
+    left: 0;
+    margin: 0 auto;
+}    
+.contact-style4-content .inner ul li .title {
+    padding-top: 20px;
+    padding-left: 0;
+    text-align: center;
+}    
+.contact-style4-content .inner ul li .title p br{
+    display: none;
+}
+    
+.contact-style4-form {
+    padding-top: 60px;
+    padding-bottom: 120px;
+} 
+    
+/*** Testimonial Style4 Area Css ***/ 
+.testimonial-style4-area .sec-title {
+    padding-bottom: 124px;
+}    
+.testimonial-style4-area .owl-nav-style-one.owl-theme .owl-nav {
+    top: -90px;
+    right: inherit;
+    left: 0;
+}    
+
+/*** Footer Top Contact Area Css ***/ 
+.footer-top-contact-box4 {
+    padding: 51px 20px 11px;
+}
+.footer-top-contact-box4:before {
+    display: none;
+}    
+.footer-top-contact-box4 .single-box {
+    width: 100%;
+    float: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    text-align: center;
+}   
+.footer-top-contact-box4 .single-box.style2 {
+    padding-left: 0px;
+}    
+.footer-top-contact-box4 .single-box .big-icon {
+    display: none;
+}    
+.footer-top-contact-box4 .single-box .icon {
+    margin-bottom: 17px;
+}    
+.footer-top-contact-box4 .single-box .title p {
+    margin: 0px 0px 5px;
+}    
+ 
+
+.footer-bottom.style2 .outer-box {
+    padding: 21px 0;
+}  
+.copyright-text.style2 {
+    padding: 0;
+}    
+.footer-bottom.style2 .outer-box .footer-menu {
+    padding: 5px 0 0;
+}    
+   
+.single-fact-counter-style2 {
+    max-width: 280px;
+    margin: 0 auto;
+}
+.single-blog-style4 .text-holder h3 a br{
+    display: none;
+}    
+    
+    
+   
+    
+    
+/*** Header Style5 Css ***/
+.header-top-style5 {
+    padding: 30px 0 30px;
+}    
+.header-top-style5 .outer-box {
+    display: none;
+}   
+.header-upper-style5 .outer-box {
+    width: 100%;
+    background: #ffffff;
+}    
+.header-upper-left-style5 {
+    width: 80%;
+}   
+.header-upper-left-style5 .logo {
+    padding: 20px 0;
+    width: 210px;
+}       
+.header-upper-right-style5 .top-box {
+    display: none;
+}  
+    
+.header-upper-right-style5 {
+    max-width: 20%;
+    width: 100%;
+    float: right !important;
+} 
+.header-upper-right-style5 .bottom-box {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 50px;
+    float: right;
+    margin-right: 20px;
+}
+.header-upper-right-style5 .bottom-box .nav-outer {
+    float: right;
+}      
+.quote-button-style5{
+    display: none;
+}    
+  
+/*** Service Style6 Area Css ***/ 
+.service-style6-area .title h1 br{
+    display: none;
+}    
+.single-service-style6 .text-holder {
+    padding: 35px 40px 35px;
+    padding-right: 30px;
+    margin-left: 0px;
+}    
+.single-service-style6 .text-holder .icon {
+    margin-bottom: 17px;
+}       
+    
+/*** About Style5 Area Css ***/ 
+.about-style5-image-box {
+    padding-left: 0px;
+}    
+.about-style5-image-box .inner {
+    max-width: 600px;
+}    
+.about-style5-text-box {
+    padding-top: 50px;
+}    
+ 
+/*** Service Style7 Area Css ***/     
+.service-style7-text-box {
+    padding-top: 40px;
+}    
+   
+/*** Portfolio Style5 Area Css ***/       
+.portfolio-style5-area .fullwidth-container {
+    padding: 0 10px;
+}    
+    
+/*** Testimonial Style5 Area Css ***/   
+.testimonial-style5-area .sec-title {
+    padding-bottom: 124px;
+}  
+    
+.single-testimonial-style5 .top {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.single-testimonial-style5 .top .client-info {
+    padding-left: 0px;
+    margin-top: 20px;
+}
+.single-testimonial-style5 .text {
+    padding-top: 24px;
+}    
+.testimonial-style5-area .owl-nav-style-one.owl-theme .owl-nav {
+    top: -100px;
+    left: 0;
+    right: inherit;
+}    
+    
+/*** Main Slider Style4 Css ***/
+.main-slider.style4 .slide {
+    padding: 247px 0px 180px;
+}    
+.main-slider.style4 .content h2 {
+    font-size: 42px;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin-top: 23px;
+    margin-bottom: 39px;
+}    
+.main-slider.style4 .content h2 br{
+    display: none;
+}    
+    
+/*** Main Slider Style4 Home5 Css ***/    
+.main-slider.style4.home5 .slide {
+    padding: 237px 0px 180px;
+}        
+.main-slider.style4.home5 .content h2 {
+    line-height: 1.2em;
+    margin-top: 30px;
+    margin-bottom: 44px;
+}    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 992px) {
+span.hometext {
+    display: none;
+}
+span.homeicon{
+    display: block;
+} 
+
+}
+
+
+@media only screen and (min-width: 768px){
+	.main-menu .navigation > li > ul,
+	.main-menu .navigation > li > ul > li > ul{
+		display:block !important;
+		visibility:hidden;
+		opacity:0;
+	}
+}
+
+
+@media only screen and (max-width: 991px) {
+span.hometext {
+    display: block;
+}
+span.homeicon{
+    display: none;
+}           
+.header-top {
+    padding: 16px 0;
+}    
+.header-top-left {
+    max-width: 100%;
+    text-align: center;
+}
+.header-top-middle {
+    max-width: 100%;
+    text-align: center;
+    padding: 9px 0 3px;
+}  
+.header-top-right {
+    max-width: 100%;
+    text-align: center;
+}
+.header-menu {
+    float: none;
+}    
+.header-menu ul li {
+    float: none;
+    padding-right: 11px;
+    margin-right: 10px;
+}
+.header-lawer .outer-box {
+    background: #030e27;
+    padding: 0 15px;
+}    
+.header-lawer-left {
+    float: none !important;
+}    
+.header-lawer-right {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    display: block;
+    float: none !important;
+    z-index: 100;
+}  
+.outer-search-box-style1 {
+    position: absolute;
+    top: 0;
+    left: 260px;
+    float: none;
+    padding: 30px 0;
+    margin-right: 0;
+}
+.quote-button {
+    float: none;
+    margin: 5px 0;
+}    
+    
+    
+.main-header .main-menu {
+    position: relative;
+    display: block;
+    width: 100%;
+    float: none;
+}      
+.main-header .nav-outer .main-menu,
+.sticky-header{
+    display: none !important;
+}
+.nav-outer .mobile-nav-toggler{
+    display: block;
+}
+.mobile-nav-toggler .icon-bar {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    height: 2px;
+    width: 30px;
+    margin: 7px 5px;
+}    
+
+ 
+    
+    
+}
+
+
+
+
+@media only screen and (max-width: 1550px) {
+    
+.video-holder-box-style4 {
+    left: auto;
+    right: 0px;
+    bottom: 142px;
+}    
+    
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1350px) { 
+    
+.single-service-style3 .overlay-content .title-holder h3 {
+    font-size: 20px;
+    line-height: 32px;
+}    
+    
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1199px) {    
+.single-service-style3 .overlay-content .title-holder h3 {
+    font-size: 18px;
+    line-height: 26px;
+}  
+.single-service-style3 .overlay-content .title-holder h3 br{
+    display: none;
+}    
+    
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 999px) {    
+.single-service-style3 .overlay-content .title-holder h3 {
+    font-size: 18px;
+    line-height: 26px;
+}  
+.single-service-style3 .overlay-content .title-holder h3 br{
+    display: none;
+}    
+    
+}
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1700px) {    
+ 
+.about-style1-area.style3 {
+    margin-top: 0;
+    padding: 120px 0 80px;
+}    
+.about-style3-image-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 750px;
+}    
+    
+    
+}
+
+
+
+
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1220px) {    
+    
+.header-upper-right-style5 {
+    max-width: 895px;
+}    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

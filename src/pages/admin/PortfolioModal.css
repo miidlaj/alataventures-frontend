@@ -1,0 +1,28 @@
+.radio-group .radio:first-child{
+	border-top-left-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+}
+
+.radio-group .radio:last-child{
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+}
+
+.radio-group .radio{
+	position: relative;
+}
+
+.radio input{
+	visibility: hidden;
+	position: absolute;
+
+}
+
+.radio label:hover{
+  cursor: pointer;
+}
+
+.radio input:checked + label{
+  border-color:#38C172;
+	background-color:#E3FCEC;
+}
