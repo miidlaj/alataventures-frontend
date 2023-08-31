@@ -8,3 +8,22 @@ export const getAllPortfolio = async () => {
         return error?.response
     }
 }
+
+
+export const addPortfolio = async (data) => {
+    try {
+        const response = await AxiosAdmin.post('/portfolio', data)
+        return response
+    } catch (error) {
+        return error?.response
+    }
+}
+
+export const updatePortfolio = async (portfolioId ,data) => {
+    try {
+        const response = await AxiosAdmin.put('/portfolio/' + portfolioId, data)
+        return response
+    } catch (error) {
+        return error?.response
+    }
+}

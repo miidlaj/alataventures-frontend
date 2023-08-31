@@ -1,25 +1,63 @@
 import React, { useState } from "react";
 import { getAllPortfolio } from "../../api/Portfolio";
 import PortfolioModal from "./PortfolioModal";
+import { toast } from "react-hot-toast";
 
 const Portfolio = () => {
   const [portfolios, setPortfolios] = React.useState([]);
 
-  React.useEffect(() => {
+  const fetchPortfolios = () => {
     getAllPortfolio().then((res) => {
-      setPortfolios(res.data.portfolioData);
+      console.log(res);
+      if (res?.status === 200) {
+        setPortfolios(res?.data?.portfolioData);
+      } else {
+        toast.error("Could not load portfolio data!");
+      }
     });
+  };
+  React.useEffect(() => {
+    fetchPortfolios();
   }, []);
 
   const [openModal, setOpenModal] = useState(false);
-  const [selected, setSetselected] = useState({title: '', description: '', location: '', status: '', image: null});
+  const [selected, setSetselected] = useState({
+    _id: null,
+    title: "",
+    company: "",
+    location: "",
+    status: "",
+    image: null,
+    imageUrl: "",
+  });
 
   const toggleModal = (val) => {
     setOpenModal(val);
+  };
+
+  const handleNewPortfolio = (newPortfolio) => {
+    setPortfolios(portfolios.concat(newPortfolio));
+  };
+
+  const handleUpdatedPortfolio = (existingPortfolio) => {
+    setPortfolios((portfolios.filter(x => x._id !== existingPortfolio._id)).concat(existingPortfolio));
+    
+  };
+
+  const handlePortfolioClick = (portfolio) => {
+    setSetselected({...portfolio, image: null});
+    console.log(selected);
+    setOpenModal(true);
   }
   return (
     <>
-    <PortfolioModal openModal={openModal} toggleModal={toggleModal}/>
+      <PortfolioModal
+        openModal={openModal}
+        toggleModal={toggleModal}
+        handleNewPortfolio={handleNewPortfolio}
+        handleUpdatedPortfolio={handleUpdatedPortfolio}
+        selected={selected}
+      />
       <div className="flex-1 px-2 sm:px-0">
         <div className="flex justify-between items-center">
           <h3 className="text-3xl font-extralight text-white/50">Portfolio</h3>
@@ -65,7 +103,10 @@ const Portfolio = () => {
           </div>
         </div>
         <div className="mb-10 sm:mb-0 mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <div onClick={() => setOpenModal(true)} className="group bg-gray-900/30 py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/40 hover:smooth-hover">
+          <div
+            onClick={() => setOpenModal(true)}
+            className="group bg-gray-900/30 py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/40 hover:smooth-hover"
+          >
             <p
               className="bg-gray-900/70 text-white/50 group-hover:text-white group-hover:smooth-hover flex w-20 h-20 rounded-full items-center justify-center"
               href="#"
@@ -95,11 +136,11 @@ const Portfolio = () => {
 
           {portfolios.length !== 0 &&
             portfolios.map((portfolio) => (
-              <div className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover">
+              <div key={portfolio.title} onClick={() => handlePortfolioClick(portfolio)} className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover">
                 <img
                   className="w-20 h-20 object-cover object-center rounded-full"
                   src={portfolio.imageUrl}
-                  alt="cuisine"
+                  alt="not-loaded"
                 />
                 <h4 className="text-white text-xl capitalize text-center">
                   {portfolio.title}
@@ -109,12 +150,11 @@ const Portfolio = () => {
                   {portfolio.status}
                   <span className="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse" />
                 </p>
-                <p className="text-white/50 absolute bottom-2 text-sm">{portfolio.location}</p>
-
+                <p className="text-white/50 absolute bottom-2 text-sm">
+                  {portfolio.location}
+                </p>
               </div>
             ))}
-
-          
         </div>
       </div>
     </>
