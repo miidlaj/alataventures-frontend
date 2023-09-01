@@ -5,7 +5,7 @@ module.exports = {
     "./src/pages/admin/AdminNav.jsx",
     "./src/pages/admin/Gallery.jsx",
     "./src/pages/admin/Portfolio.jsx",
-    "./src/pages/admin/Modal.jsx"
+    "./src/pages/admin/PortfolioModal.jsx"
   ],
   theme: {
     extend: {},

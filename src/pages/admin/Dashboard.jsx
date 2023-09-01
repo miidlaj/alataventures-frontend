@@ -4,8 +4,12 @@ import { Route, Routes } from "react-router-dom";
 import Portfolio from "./Portfolio";
 import Gallery from "./Gallery";
 import AdminNav from "./AdminNav";
+import Partners from "./Partners";
 
 const Dashboard = () => {
+
+  
+
   return (
     <>
      <div className="bg-gray-900 min-h-screen flex items-center justify-center">
@@ -14,8 +18,9 @@ const Dashboard = () => {
           <AdminNav/>
           {/* Content */}
           <Routes>
-            <Route path="/" element={<Portfolio />} />
+            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/partners" element={<Partners/>} />
           </Routes>
         </div>
       </div>

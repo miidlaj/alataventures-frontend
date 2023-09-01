@@ -206,8 +206,11 @@ const PortfolioModal = ({
                 />
               </svg>
             </div>
-            
-           
+            <div className="flex justify-between">
+              <h1 className="text-gray-800 font-lg font-bold tracking-normal leading-tight mb-4">
+                Enter Portfolio Details
+              </h1>
+            </div>
 
             <label
               htmlFor="title"
@@ -275,7 +278,7 @@ const PortfolioModal = ({
                 />
                 <div className="radio-tile">
                   <div className="icon walk-icon">
-                    <i className="flaticon-menu text-yellow-600"></i>
+                    <i class="flaticon-menu text-yellow-600"></i>
                   </div>
                   <label htmlFor="EXECUTED" className="radio-tile-label">
                     EXECUTED
@@ -294,7 +297,7 @@ const PortfolioModal = ({
                 />
                 <div className="radio-tile">
                   <div className="icon bike-icon">
-                    <i className="flaticon-building"></i>
+                    <i class="flaticon-building"></i>
                   </div>
                   <label htmlFor="ONGOING" className="radio-tile-label">
                     ONGOING
@@ -313,7 +316,7 @@ const PortfolioModal = ({
                 />
                 <div className="radio-tile">
                   <div className="icon car-icon">
-                    <i className="flaticon-modern-bridge-road-symbol"></i>
+                    <i class="flaticon-modern-bridge-road-symbol"></i>
                   </div>
                   <label htmlFor="YET_TO_COMMENCE" className="radio-tile-label">
                     COMMENCE
@@ -332,7 +335,7 @@ const PortfolioModal = ({
                 />
                 <div className="radio-tile">
                   <div className="icon car-icon">
-                    <i className="flaticon-modern-bridge-road-symbol"></i>
+                    <i class="flaticon-modern-bridge-road-symbol"></i>
                   </div>
                   <label htmlFor="UPCOMING" className="radio-tile-label">
                     UPCOMING
@@ -402,7 +405,6 @@ const PortfolioModal = ({
               className="flex items-center w-full"
               style={{ justifyContent: "end" }}
             >
-
               <button
                 type="submit"
                 onClick={() => formSubmitHandler()}

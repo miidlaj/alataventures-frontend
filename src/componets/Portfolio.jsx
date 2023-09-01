@@ -45,12 +45,7 @@ const Portfolio = () => {
                       Upcoming
                     </span>
                   </li>
-                  <li data-filter=".interior">
-                    <span className="filter-text">
-                      <i className="flaticon-chair" />
-                      Interiors
-                    </span>
-                  </li>
+                  
                 </ul>
               </div>
             </div>

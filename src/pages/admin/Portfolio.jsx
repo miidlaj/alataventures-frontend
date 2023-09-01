@@ -49,6 +49,19 @@ const Portfolio = () => {
     console.log(selected);
     setOpenModal(true);
   }
+
+  const handleNewPortfolioModal = () => {
+    setSetselected({
+      _id: null,
+      title: "",
+      company: "",
+      location: "",
+      status: "",
+      image: null,
+      imageUrl: "",
+    });
+    setOpenModal(true);
+  }
   return (
     <>
       <PortfolioModal
@@ -104,7 +117,7 @@ const Portfolio = () => {
         </div>
         <div className="mb-10 sm:mb-0 mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div
-            onClick={() => setOpenModal(true)}
+            onClick={() => handleNewPortfolioModal()}
             className="group bg-gray-900/30 py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/40 hover:smooth-hover"
           >
             <p
