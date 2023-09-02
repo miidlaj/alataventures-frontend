@@ -1,53 +1,37 @@
-import React from 'react'
-import Footer from '../componets/Footer'
-import Partner from '../componets/Partner'
-import Contact from '../componets/Contact'
-import Portfolio from '../componets/Portfolio'
-import About from '../componets/About'
-import Slider from '../componets/Slider'
-import Navbar from '../componets/Navbar'
-
+import React from "react";
+import Footer from "../componets/Footer";
+import Partner from "../componets/Partner";
+import Contact from "../componets/Contact";
+import Portfolio from "../componets/Portfolio";
+import About from "../componets/About";
+import Slider from "../componets/Slider";
+import Navbar from "../componets/Navbar";
 
 const Home = () => {
   return (
     <>
-     <div className="boxed_wrapper">
-        <div className="preloader" />
+      {/* Start Main Slider */}
+      <Slider />
+      {/* End Main Slider */}
 
-        {/* main header */}
-        <Navbar />
-        {/* End main header */}
+      {/*Start About Style1 Area*/}
+      <About />
+      {/*End About Style1 Area*/}
 
-        {/* Start Main Slider */}
-        <Slider />
-        {/* End Main Slider */}
 
-        {/*Start About Style1 Area*/}
-        <About />
-        {/*End About Style1 Area*/}
+      {/*Start Contact Form Section*/}
+      <Contact />
+      {/*End Contact Form Section*/}
 
-        {/*Start Latest Portfolio Area*/}
-        <Portfolio />
-        {/*End Latest Portfolio Area*/}
+      {/*Start Partner Area*/}
+      <Partner />
+      {/*End Partner Area*/}
 
-        {/*Start Contact Form Section*/}
-        <Contact />
-        {/*End Contact Form Section*/}
-
-        {/*Start Partner Area*/}
-        <Partner />
-        {/*End Partner Area*/}
-
-        {/*Start footer area*/}
-        <Footer />
-        {/*End footer area*/}
-        
-      </div>
-      <button className="scroll-top scroll-to-target" data-target="html">
-        <span className="icon-angle" />
-      </button>
+      {/*Start footer area*/}
+      <Footer />
+      {/*End footer area*/}
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

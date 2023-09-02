@@ -31,7 +31,6 @@
 window.onload = AllFunc;
 
 function AllFunc() {
-    
   // Main Slider Carousel
   if ($(".banner-carousel").length) {
     $(".banner-carousel").owlCarousel({
@@ -61,7 +60,6 @@ function AllFunc() {
       },
     });
   }
-
 
   //Submenu Dropdown Toggle
   if ($(".main-header li.dropdown ul").length) {
@@ -367,34 +365,6 @@ function AllFunc() {
       mirror: true,
     });
   }
-  //Contact Form Validation
-  if ($("#contact-form").length) {
-    $("#contact-form").validate({
-      submitHandler: function (form) {
-        var form_btn = $(form).find('button[type="submit"]');
-        var form_result_div = "#form-result";
-        $(form_result_div).remove();
-        form_btn.before(
-          '<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>'
-        );
-        var form_btn_old_msg = form_btn.html();
-        form_btn.html(form_btn.prop("disabled", true).data("loading-text"));
-        $(form).ajaxSubmit({
-          dataType: "json",
-          success: function (data) {
-            if ((data.status = "true")) {
-              $(form).find(".form-control").val("");
-            }
-            form_btn.prop("disabled", false).html(form_btn_old_msg);
-            $(form_result_div).html(data.message).fadeIn("slow");
-            setTimeout(function () {
-              $(form_result_div).fadeOut("slow");
-            }, 6000);
-          },
-        });
-      },
-    });
-  }
   // Add Comment Form Validation
   if ($("#add-comment-form").length) {
     $("#add-comment-form").validate({
@@ -450,7 +420,6 @@ jQuery(document).on("ready", function () {
 });
 
 jQuery(window).on("scroll", function () {
-  
   (function ($) {
     headerStyle();
     OnePageMenuScroll();
@@ -461,7 +430,7 @@ jQuery(window).on("scroll", function () {
 jQuery(window).on("load", function () {
   (function ($) {
     prealoader();
-    projectMasonaryLayout();
+    // projectMasonaryLayout();
     sortableMasonry();
     enableMasonry();
   })(jQuery);
@@ -503,7 +472,7 @@ function OnePageMenuScroll() {
       .each(function () {
         // grabing section id dynamically
         var sections = $(this).attr("href");
-        if (sections !== "/gallery") {
+        if (sections.includes("#")) {
           $(sections).each(function () {
             // checking is scroll bar are in section
             if ($(this).offset().top <= windscroll + 100) {
@@ -519,7 +488,6 @@ function OnePageMenuScroll() {
             }
           });
         }
-       
       });
   } else {
     $(".mainmenu.one-page-scroll-menu li.current").removeClass("current");
@@ -730,36 +698,38 @@ function tooltip() {
   if ($(".tool_tip").length) {
     $(".tool_tip").tooltip();
   }
-  $;
 }
 
-// ===Project===
-function projectMasonaryLayout() {
-  if ($(".masonary-layout").length) {
-    $(".masonary-layout").isotope({
-      layoutMode: "masonry",
-    });
-  }
-  if ($(".post-filter").length) {
-    $(".post-filter li")
-      .children(".filter-text")
-      .on("click", function () {
-        var Self = $(this);
-        var selector = Self.parent().attr("data-filter");
-        $(".post-filter li").removeClass("active");
-        Self.parent().addClass("active");
-        $(".filter-layout").isotope({
-          filter: selector,
-          animationOptions: {
-            duration: 500,
-            easing: "linear",
-            queue: false,
-          },
-        });
-        return false;
-      });
-  }
-}
+// // ===Project===
+// function projectMasonaryLayout() {
+//   if ($(".masonary-layout").length) {
+//     $(".masonary-layout").isotope({
+//       layoutMode: "masonry",
+//     });
+//   }
+//   if ($(".post-filter").length) {
+//     $(".post-filter li")
+//       .children(".filter-text")
+//       .on("click", function () {
+//         var Self = $(this);
+//         var selector = Self.parent().attr("data-filter");
+//         console.log(selector);
+//         $(".post-filter li").removeClass("active");
+//         Self.parent().addClass("active");
+
+//         $(".filter-layout").isotope({
+//           filter: selector,
+//           animationOptions: {
+//             duration: 500,
+//             easing: "linear",
+//             queue: false,
+//           },
+//         });
+
+//         return false;
+//       });
+//   }
+// }
 
 function countryInfo() {
   if ($(".area_select").length) {
@@ -913,4 +883,3 @@ function enableMasonry() {
   }
 }
 enableMasonry();
-

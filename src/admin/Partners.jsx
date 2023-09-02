@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
+import {
+  addPartnerImage,
+  deletePartnerImage,
+  getAllPartnerImagees,
+} from "../api/Partner";
 import { Toaster, toast } from "react-hot-toast";
-import { addImage, deleteImage, getAllImagees } from "../../api/Gallery";
 
-const Gallery = () => {
+const Partners = () => {
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const [images, setImages] = useState([]);
 
   const fetchImages = async () => {
-    await getAllImagees().then((res) => {
+    await getAllPartnerImagees().then((res) => {
       if (res?.status === 200) {
         setImages(res?.data?.imageData);
       } else {
@@ -60,7 +64,7 @@ const Gallery = () => {
     console.log(image);
     formDataToSend.append("image", image);
 
-    await addImage(formDataToSend).then((res) => {
+    await addPartnerImage(formDataToSend).then((res) => {
       if (res?.status === 201) {
         setImages(images.concat(res?.data?.newImage));
         toast.success(res?.data?.message);
@@ -77,15 +81,15 @@ const Gallery = () => {
   };
 
   const handleDelete = (img) => {
-    deleteImage(img._id).then((res) => {
+    deletePartnerImage(img._id).then((res) => {
       if (res?.status === 200) {
-        setImages(images.filter(x => x._id !== res?.data?.deletedImage?._id));
+        setImages(images.filter((x) => x._id !== res?.data?.deletedImage?._id));
         toast.success(res?.data?.message);
       } else {
         toast.error(res?.data?.message);
       }
-    })
-  }
+    });
+  };
   return (
     <>
       <Toaster
@@ -113,9 +117,9 @@ const Gallery = () => {
           },
         }}
       />
-      <div className="flex-1 px-2 sm:px-0">
+      <div className="flex-1 px-2 sm:px-0 min-h-screen">
         <div className="flex justify-between items-center">
-          <h3 className="text-3xl font-extralight text-white/50">Gallery</h3>
+          <h3 className="text-3xl font-extralight text-white/50">Partner</h3>
           <div className="inline-flex items-center space-x-2">
             <a
               className="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover"
@@ -235,7 +239,10 @@ const Gallery = () => {
                 />
 
                 <div className="absolute bottom-2">
-                  <button onClick={() => handleDelete(img)} className="inline-flex items-center px-4 py-2 bg-transparent hover:bg-red-700 hover:text-white transition duration-300 ease-in-out text-red-700 text-sm font-medium rounded-md">
+                  <button
+                    onClick={() => handleDelete(img)}
+                    className="inline-flex items-center px-4 py-2 bg-transparent hover:bg-red-700 hover:text-white transition duration-300 ease-in-out text-red-700 text-sm font-medium rounded-md"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5 mr-2"
@@ -261,4 +268,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default Partners;

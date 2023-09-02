@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+
+  const location = useLocation();
   return (
     <>
       <header className="main-header">
@@ -12,13 +13,13 @@ const Navbar = () => {
             <div className="outer-box clearfix">
               <div className="header-upper-left float-left clearfix">
                 <div className="logo">
-                  <a href="index.html">
+                  <Link to="/">
                     <img
                       src="assets/images/resources/alata-logo.jpg"
                       alt="Awesome Logo"
                       title=""
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="header-upper-right float-right clearfix">
@@ -87,18 +88,28 @@ const Navbar = () => {
                     >
                       <ul className="navigation clearfix mainmenu one-page-scroll-menu">
                         <li className="scrollToLink">
-                          <a className="home-icon" href="#banner">
+                          <Link to={"/"} className="home-icon" href="#banner">
                             <span className="hometext">Home</span>
                             <span className="flaticon-real-estate homeicon" />
-                          </a>
+                          </Link>
                         </li>
                         <li className="scrollToLink">
                           <a href="#about">About</a>
                         </li>
-                        <li className="scrollToLink">
-                          <a href="#portfolio">Portfolio</a>
+                        <li
+                          className={`"scrollToLink " ${
+                            location.pathname.includes("/portfolio") &&
+                            " text-white"
+                          }`}
+                        >
+                          <a href="/portfolio">Portfolio</a>
                         </li>
-                        <li className="scrollToLink">
+                        <li
+                          className={`"scrollToLink " ${
+                            location.pathname.includes("/gallery") &&
+                            " text-white"
+                          }`}
+                        >
                           <Link to="/gallery">Gallery</Link>
                         </li>
                       </ul>
@@ -108,10 +119,10 @@ const Navbar = () => {
                 </div>
               </div>
               {/*Top Right*/}
+
               <div className="header-lawer-right clearfix float-right">
-                
                 <div className="quote-button">
-                  <a href="#">
+                  <a href="#contact">
                     Contact US
                     <span className="fa fa-phone" />
                   </a>

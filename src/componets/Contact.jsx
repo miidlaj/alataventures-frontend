@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import { useForm, Controller } from "react-hook-form";
+import { sendMail } from "../api/Contact";
 
 const Contact = () => {
+  const [successMessage, setSucessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const [formKey, setFormKey] = useState(0);
+
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm();
+
+  const submitForm = async (data) => {
+    await sendMail(data).then((res) => {
+      if (res?.status === 200) {
+        resetForm();
+        setSucessMessage("Form submitted successfully!");
+        setErrorMessage("");
+      } else {
+        setErrorMessage("Cannot submit form at the moment, Please try later");
+        setSucessMessage("");
+      }
+    });
+  };
+
+  const resetForm = () => {
+    setFormKey((prevKey) => prevKey + 1);
+  };
+
   return (
     <>
-      <section id="contact" className="contact-form-area">
+      <section id="contact" className="contact-form-area mt-5">
         <div className="auto-container">
           <div className="row clearfix">
             <div className="col-xl-7 col-lg-7 col-md-12">
@@ -13,35 +43,54 @@ const Contact = () => {
                 </div>
                 <div className="inner-box">
                   <form
-                    id="contact-form"
-                    name="contact_form"
+                    key={formKey}
                     className="default-form2"
-                    action="assets/inc/sendmail.php"
-                    method="post"
+                    onSubmit={handleSubmit(submitForm)}
                   >
                     <div className="row">
                       <div className="col-xl-6">
                         <div className="input-box">
                           <p>Name:</p>
-                          <input
-                            type="text"
-                            name="form_name"
-                            defaultValue=""
-                            placeholder=""
-                            required=""
+                          <Controller
+                            name="name"
+                            control={control}
+                            rules={{ required: true, maxLength: 30 }}
+                            render={({ field }) => (
+                              <input {...field} type="text" />
+                            )}
                           />
+                          {errors.name && (
+                            <span className="text-xs text-danger">
+                              Name is required (max 30 characters).
+                            </span>
+                          )}
                         </div>
                       </div>
                       <div className="col-xl-6">
                         <div className="input-box">
                           <p>Email Address:</p>
-                          <input
-                            type="email"
-                            name="form_email"
-                            defaultValue=""
-                            placeholder=""
-                            required=""
+                          <Controller
+                            name="emailAddress"
+                            control={control}
+                            rules={{
+                              required: true,
+                              maxLength: 30,
+                              pattern: {
+                                value:
+                                  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i, // Email regex
+                                message: "Invalid email address",
+                              },
+                            }}
+                            render={({ field }) => (
+                              <input {...field} type="text" />
+                            )}
                           />
+                          {errors.emailAddress && (
+                            <span className="text-xs text-danger">
+                              {errors.emailAddress.message ||
+                                "Email Address is required (max 30 characters)."}
+                            </span>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -49,23 +98,52 @@ const Contact = () => {
                       <div className="col-xl-6">
                         <div className="input-box">
                           <p>Subject:</p>
-                          <input
-                            type="text"
-                            name="form_subject"
-                            defaultValue=""
-                            placeholder=""
+                          <Controller
+                            name="subject"
+                            control={control}
+                            rules={{ required: true, maxLength: 30 }}
+                            render={({ field }) => (
+                              <input {...field} type="text" />
+                            )}
                           />
+                          {errors.subject && (
+                            <span className="text-xs text-danger">
+                              Subject is required (max 30 characters).
+                            </span>
+                          )}
                         </div>
                       </div>
                       <div className="col-xl-6">
                         <div className="input-box">
                           <p>Phone:</p>
-                          <input
-                            type="text"
-                            name="form_phone"
-                            defaultValue=""
-                            placeholder=""
+                          <Controller
+                            name="phone"
+                            control={control}
+                            rules={{
+                              required: true,
+                              maxLength: 30,
+                              pattern: {
+                                value: /^[0-9]+$/,
+                                message: "Invalid phone number",
+                              },
+                              validate: (value) => {
+                                // Custom validation function to check if the phone number has at least 10 digits
+                                if (value.length < 10) {
+                                  return "Phone number must have at least 10 digits";
+                                }
+                                return true;
+                              },
+                            }}
+                            render={({ field }) => (
+                              <input {...field} type="text" />
+                            )}
                           />
+                          {errors.phone && (
+                            <span className="text-xs text-danger">
+                              {errors.phone.message ||
+                                "Phone is required (max 30 characters)."}
+                            </span>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -73,33 +151,43 @@ const Contact = () => {
                       <div className="col-xl-12">
                         <div className="input-box">
                           <p>Message:</p>
-                          <textarea
-                            name="form_message"
-                            placeholder=""
-                            required=""
-                            defaultValue={""}
+
+                          <Controller
+                            name="message"
+                            control={control}
+                            rules={{ required: true, maxLength: 1024 }}
+                            render={({ field }) => (
+                              <textarea {...field} rows="4" />
+                            )}
                           />
+                          {errors.message && (
+                            <span className="text-xs text-danger">
+                              Message is required (max 1024 characters).
+                            </span>
+                          )}
                         </div>
                       </div>
                     </div>
                     <div className="row">
                       <div className="col-xl-12">
-                        <div className="button-box">
-                          <input
-                            id="form_botcheck"
-                            name="form_botcheck"
-                            className="form-control"
-                            type="hidden"
-                            defaultValue=""
-                          />
-                          <button
-                            className="btn-one"
-                            type="submit"
-                            data-loading-text="Please wait..."
-                          >
-                            Submit
-                          </button>
-                        </div>
+                        {!errorMessage && !successMessage && (
+                          <div className="button-box">
+                            <button className="btn-one" type="submit">
+                              Submit
+                            </button>
+                          </div>
+                        )}
+
+                        {errorMessage && (
+                          <span className="text-xs text-danger">
+                            {errorMessage}
+                          </span>
+                        )}
+                        {successMessage && (
+                          <span className="text-xs text-success">
+                            {successMessage}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </form>

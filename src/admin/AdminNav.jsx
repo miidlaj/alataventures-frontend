@@ -1,9 +1,15 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const AdminNav = () => {
 
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate('/admin/login');
+  }
 
   return (
     <>
@@ -94,10 +100,10 @@ const AdminNav = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </a>
-              <a
+              </a> */}
+              <div
                 className="text-white/50 p-4 inline-flex justify-center rounded-md hover:bg-gray-800 hover:text-white smooth-hover"
-                href="#"
+                onClick={() => handleLogout()}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +117,7 @@ const AdminNav = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </a> */}
+              </div>
         </div>
       </div>
     </>

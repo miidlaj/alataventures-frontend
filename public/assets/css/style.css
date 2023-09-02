@@ -1721,7 +1721,6 @@ select:focus {
 .main-menu .navigation>li>a {
 	position: relative;
 	display: block;
-	color: #ffffff;
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 600;
@@ -12496,3 +12495,4 @@ select:focus {
     color: #fff;
     border-color: #43c3ea;
 }
+

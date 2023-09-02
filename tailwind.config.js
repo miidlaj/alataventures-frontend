@@ -1,11 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/admin/Dashboard.jsx",
-    "./src/pages/admin/AdminNav.jsx",
-    "./src/pages/admin/Gallery.jsx",
-    "./src/pages/admin/Portfolio.jsx",
-    "./src/pages/admin/PortfolioModal.jsx"
+    "./src/admin/Dashboard.jsx",
+    "./src/admin/AdminNav.jsx",
+    "./src/admin/Gallery.jsx",
+    "./src/admin/Portfolio.jsx",
+    "./src/admin/Partner.jsx",
+    "./src/admin/Login.jsx",
+    "./src/admin/Modal.jsx",
+
+     // Add your exclusions here
+     "!./src/pages/GalleryPage.jsx", 
+     "!./src/pages/Home.jsx",
+     "!./src/components/Navbar.jsx",
+     "!./src/components/About.jsx",
+     "!./src/components/Contact.jsx",
+     "!./src/components/Footer.jsx",
+     "!./src/components/Partner.jsx",
+     "!./src/components/Portfolio.jsx",
+     "!./src/components/Slider.jsx",
+
+
   ],
   theme: {
     extend: {},

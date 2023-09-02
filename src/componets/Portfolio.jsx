@@ -1,11 +1,46 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/img-redundant-alt */
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getAllPortfolio } from "../api/Portfolio";
 
 const Portfolio = () => {
+  const [portfolios, setPortfolios] = useState([]);
+  const [portfoliosToShow, setPortfoliosToShow] = useState([]);
+
+
+  const fetchPortfolios = async () => {
+    await getAllPortfolio().then((res) => {
+      if (res?.status === 200) {
+        const datas = res.data.portfolioData;
+        setPortfolios(datas);
+        setPortfoliosToShow(datas);
+      }
+    });
+  };
+
+  const [tab, setTab] = useState('ALL')
+
+  const handleTabChange = (tabName) => {
+    if (tabName === 'ALL') {
+      setPortfoliosToShow(portfolios);
+    } else {
+      setPortfoliosToShow(portfolios.filter(x => x.status === tabName))
+    }
+    setTab(tabName)
+  }
+
+
+  useEffect(() => {
+    fetchPortfolios();
+  }, []);
+
+  
   return (
     <>
-      <section id="portfolio" className="latest-portfolio-area onepage">
+  
+      <section
+        id="portfolio"
+        className="latest-portfolio-area onepage"
+        style={{ marginTop: "200px" }}
+      >
         <div className="container">
           <div className="sec-title text-center">
             <p>Our Work Industries!</p>
@@ -13,6 +48,7 @@ const Portfolio = () => {
               <h1>Portfolio</h1>
             </div>
           </div>
+
           <div className="row">
             <div className="col-xl-12">
               <div
@@ -21,270 +57,82 @@ const Portfolio = () => {
                 data-wow-duration="1500ms"
               >
                 <ul className="project-filter clearfix post-filter has-dynamic-filters-counter">
-                  <li data-filter=".filter-item" className="active">
+                <li onClick={() => handleTabChange('ALL')} className={`${tab === 'ALL' && 'active'}`}>
+                  <span className="filter-text">
+                      <i className="flaticon-menu" />
+                      All
+                    </span>
+                  </li>
+                  <li onClick={() => handleTabChange('EXECUTED')} className={`${tab === 'EXECUTED' && 'active'}`}>
                     <span className="filter-text">
                       <i className="flaticon-menu" />
                       Executed
                     </span>
                   </li>
-                  <li data-filter=".build">
+                  <li onClick={() => handleTabChange('ONGOING')} className={`${tab === 'ONGOING' && 'active'}`}>
                     <span className="filter-text">
                       <i className="flaticon-building" />
                       Ongoing
                     </span>
                   </li>
-                  <li data-filter=".bridge">
+                  <li onClick={() => handleTabChange('YET_TO_COMMENCE')} className={`${tab === 'YET_TO_COMMENCE' && 'active'}`}>
                     <span className="filter-text">
                       <i className="flaticon-modern-bridge-road-symbol" />
                       Yet to Commence
                     </span>
                   </li>
-                  <li data-filter=".houses">
+                  <li onClick={() => handleTabChange('UPCOMING')} className={`${tab === 'UPCOMING' && 'active'}`}>
                     <span className="filter-text">
                       <i className="flaticon-house" />
                       Upcoming
                     </span>
                   </li>
-                  
                 </ul>
               </div>
             </div>
           </div>
           <div className="row filter-layout masonary-layout">
-            {/*Start Single portfolio Style1*/}
-            <div className="col-xl-4 col-lg-6 col-md-6 filter-item bridge interior">
-              <div className="single-portfolio-style1">
-                <div className="img-holder">
-                  <div className="inner-box">
-                    <img
-                      src="assets/images/portfolio/portfolio-v1-1.jpg"
-                      alt="Awesome Image"
-                    />
-                    <div className="overlay-style-one">
-                      <div className="box">
-                        <div className="inner">
-                          <div className="zoom-button">
-                            <a
-                              className="lightbox-image"
-                              data-fancybox="gallery"
-                              href="assets/images/portfolio/portfolio-v1-1.jpg"
-                            >
-                              <span className="flaticon-plus" />
-                            </a>
+            {portfoliosToShow.length !== 0 && portfoliosToShow.map((item) => (
+                  <div
+                    key={item._id}
+                    className={`col-xl-4 col-lg-6 col-md-6`}
+                  >
+                    <div className="single-portfolio-style1">
+                      <div className="img-holder">
+                        <div className="inner-box">
+                          <img src={item.imageUrl} alt="" />
+                          <div className="overlay-style-one">
+                            <div className="box">
+                              <div className="inner">
+                                <div className="zoom-button">
+                                  <a
+                                    className="lightbox-image"
+                                    data-fancybox="gallery"
+                                    href={item.imageUrl}
+                                  >
+                                    <span className="flaticon-plus" />
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
                           </div>
+                        </div>
+                        <div className="title-holder">
+                          <span className="tag">{item.company}</span>
+                          <h5>
+                            <a href="#">{item.title}</a>
+                          </h5>
+                          <p>
+                            <span className="flaticon-location-pin" />
+                            {item.location}
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="title-holder">
-                    <span className="tag">Building</span>
-                    <h5>
-                      <a href="#">Building A Sports City</a>
-                    </h5>
-                    <p>
-                      <span className="flaticon-location-pin" />
-                      KA-62/1, Kuril, Progoti
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single portfolio Style1*/}
-            {/*Start Single portfolio Style1*/}
-            <div className="col-xl-4 col-lg-6 col-md-6 filter-item build houses">
-              <div className="single-portfolio-style1">
-                <div className="img-holder">
-                  <div className="inner-box">
-                    <img
-                      src="assets/images/portfolio/portfolio-v1-2.jpg"
-                      alt="Awesome Image"
-                    />
-                    <div className="overlay-style-one">
-                      <div className="box">
-                        <div className="inner">
-                          <div className="zoom-button">
-                            <a
-                              className="lightbox-image"
-                              data-fancybox="gallery"
-                              href="assets/images/portfolio/portfolio-v1-2.jpg"
-                            >
-                              <span className="flaticon-plus" />
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="title-holder">
-                    <span className="tag">Building</span>
-                    <h5>
-                      <a href="#">Building A Sports City</a>
-                    </h5>
-                    <p>
-                      <span className="flaticon-location-pin" />
-                      KA-62/1, Kuril, Progoti
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single portfolio Style1*/}
-            {/*Start Single portfolio Style1*/}
-            <div className="col-xl-4 col-lg-6 col-md-6 filter-item build houses">
-              <div className="single-portfolio-style1">
-                <div className="img-holder">
-                  <div className="inner-box">
-                    <img
-                      src="assets/images/portfolio/portfolio-v1-3.jpg"
-                      alt="Awesome Image"
-                    />
-                    <div className="overlay-style-one">
-                      <div className="box">
-                        <div className="inner">
-                          <div className="zoom-button">
-                            <a
-                              className="lightbox-image"
-                              data-fancybox="gallery"
-                              href="assets/images/portfolio/portfolio-v1-3.jpg"
-                            >
-                              <span className="flaticon-plus" />
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="title-holder">
-                    <span className="tag">Building</span>
-                    <h5>
-                      <a href="#">Building A Sports City</a>
-                    </h5>
-                    <p>
-                      <span className="flaticon-location-pin" />
-                      KA-62/1, Kuril, Progoti
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single portfolio Style1*/}
-            {/*Start Single portfolio Style1*/}
-            <div className="col-xl-4 col-lg-6 col-md-6 filter-item bridge interior">
-              <div className="single-portfolio-style1">
-                <div className="img-holder">
-                  <div className="inner-box">
-                    <img
-                      src="assets/images/portfolio/portfolio-v1-4.jpg"
-                      alt="Awesome Image"
-                    />
-                    <div className="overlay-style-one">
-                      <div className="box">
-                        <div className="inner">
-                          <div className="zoom-button">
-                            <a
-                              className="lightbox-image"
-                              data-fancybox="gallery"
-                              href="assets/images/portfolio/portfolio-v1-4.jpg"
-                            >
-                              <span className="flaticon-plus" />
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="title-holder">
-                    <span className="tag">Building</span>
-                    <h5>
-                      <a href="#">Building A Sports City</a>
-                    </h5>
-                    <p>
-                      <span className="flaticon-location-pin" />
-                      KA-62/1, Kuril, Progoti
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single portfolio Style1*/}
-            {/*Start Single portfolio Style1*/}
-            <div className="col-xl-4 col-lg-6 col-md-6 filter-item build houses">
-              <div className="single-portfolio-style1">
-                <div className="img-holder">
-                  <div className="inner-box">
-                    <img
-                      src="assets/images/portfolio/portfolio-v1-5.jpg"
-                      alt="Awesome Image"
-                    />
-                    <div className="overlay-style-one">
-                      <div className="box">
-                        <div className="inner">
-                          <div className="zoom-button">
-                            <a
-                              className="lightbox-image"
-                              data-fancybox="gallery"
-                              href="assets/images/portfolio/portfolio-v1-5.jpg"
-                            >
-                              <span className="flaticon-plus" />
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="title-holder">
-                    <span className="tag">Building</span>
-                    <h5>
-                      <a href="#">Building A Sports City</a>
-                    </h5>
-                    <p>
-                      <span className="flaticon-location-pin" />
-                      KA-62/1, Kuril, Progoti
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single portfolio Style1*/}
-            {/*Start Single portfolio Style1*/}
-            <div className="col-xl-4 col-lg-6 col-md-6 filter-item build houses">
-              <div className="single-portfolio-style1">
-                <div className="img-holder">
-                  <div className="inner-box">
-                    <img
-                      src="assets/images/portfolio/portfolio-v1-6.jpg"
-                      alt="Awesome Image"
-                    />
-                    <div className="overlay-style-one">
-                      <div className="box">
-                        <div className="inner">
-                          <div className="zoom-button">
-                            <a
-                              className="lightbox-image"
-                              data-fancybox="gallery"
-                              href="assets/images/portfolio/portfolio-v1-6.jpg"
-                            >
-                              <span className="flaticon-plus" />
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="title-holder">
-                    <span className="tag">Building</span>
-                    <h5>
-                      <a href="#">Building A Sports City</a>
-                    </h5>
-                    <p>
-                      <span className="flaticon-location-pin" />
-                      KA-62/1, Kuril, Progoti
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*End Single portfolio Style1*/}
+              ))}
+
+              
           </div>
           <div className="row">
             <div className="col-xl-12">
@@ -298,6 +146,8 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
+  
     </>
   );
 };

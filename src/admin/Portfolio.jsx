@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { getAllPortfolio } from "../../api/Portfolio";
-import PortfolioModal from "./PortfolioModal";
+import { getAllPortfolio } from "../api/Portfolio";
 import { toast } from "react-hot-toast";
+import Modal from "./Modal";
 
 const Portfolio = () => {
+  
   const [portfolios, setPortfolios] = React.useState([]);
 
   const fetchPortfolios = () => {
@@ -64,14 +65,17 @@ const Portfolio = () => {
   }
   return (
     <>
-      <PortfolioModal
+      
+      <div className="flex-1 px-2 sm:px-0 min-h-screen">
+
+      <Modal
         openModal={openModal}
         toggleModal={toggleModal}
         handleNewPortfolio={handleNewPortfolio}
         handleUpdatedPortfolio={handleUpdatedPortfolio}
         selected={selected}
       />
-      <div className="flex-1 px-2 sm:px-0">
+      
         <div className="flex justify-between items-center">
           <h3 className="text-3xl font-extralight text-white/50">Portfolio</h3>
           <div className="inline-flex items-center space-x-2">
