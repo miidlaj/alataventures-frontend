@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/alataventures-frontend/static/css/main.6d371587.css",
+    "main.js": "/alataventures-frontend/static/js/main.4e2cde5a.js",
+    "static/js/787.cda612ba.chunk.js": "/alataventures-frontend/static/js/787.cda612ba.chunk.js",
+    "index.html": "/alataventures-frontend/index.html",
+    "main.6d371587.css.map": "/alataventures-frontend/static/css/main.6d371587.css.map",
+    "main.4e2cde5a.js.map": "/alataventures-frontend/static/js/main.4e2cde5a.js.map",
+    "787.cda612ba.chunk.js.map": "/alataventures-frontend/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d371587.css",
+    "static/js/main.4e2cde5a.js"
+  ]
+}

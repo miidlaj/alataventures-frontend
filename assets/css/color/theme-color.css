@@ -1,0 +1,323 @@
+/*==============================================
+   Theme Color Css
+===============================================*/
+
+
+.btn-one,
+.thm_clr1,
+.main-slider .content h2 span,
+.sec-title p,
+.twitter-feed-box span,
+.twitter-feed-box .bottom .comments a i,
+.single-service-style3 .overlay-content .title-holder p,
+.slogan-content .quote-button a,
+.mobile-menu .navigation li.current > a,
+.mobile-menu .navigation li > a:hover,
+.main-menu .navigation>li>ul>li>a:hover,
+.main-menu .navigation> li> ul> li> a:before,
+.main-menu .navigation> li> ul> li:hover > a,
+.main-menu .navigation> li> ul> li> ul> li> a:hover,
+.main-menu .navigation>li>ul>li>ul>li a:before,
+.main-menu.style2 .navigation>li:hover>a,
+.main-menu.style2 .navigation>li.current>a,
+.main-menu.style2.clr-white .navigation>li:hover>a,
+.main-menu.style2.clr-white .navigation>li.current>a,
+.sticky-header .main-menu .navigation>li:hover>a, 
+.sticky-header .main-menu .navigation>li.current>a,
+.outer-search-box-style1 .seach-toggle:hover,
+.outer-search-box-style1 .seach-toggle.active,
+.single-footer-widget .page-links li a:hover,
+.single-service-style3 .overlay-content .title-holder h3 a:hover,
+.header-social-links .social-links-style1 li a:hover,
+.header-menu ul li a:hover,
+.quote-button a span:before,
+.about-style1-text-box .title p,
+.about-style1-text-box .title h1 b,
+.login-register-area .form .right h6 span,
+.single-service-style2 .overlay-content .inner-content .text-holder .title h3 a:hover,
+.single-fact-counter .count-box h1,
+.project-filter li:hover .filter-text, 
+.project-filter li.active .filter-text,
+.single-blog-post .text-holder .blog-title a:hover,
+.single-blog-post .text-holder .bottom .author-name a span:before,
+.single-blog-post .text-holder .bottom .read-more-button a,
+.single-portfolio-style1 .img-holder .title-holder p span:before,
+.single-testimonial-style1:before,
+.single-testimonial-style1 .client-info .icon-box span:before,
+.single-testimonial-style1 .client-info .title-box h3,
+.payment-tab .tab-btns li:hover i, 
+.payment-tab .tab-btns li.active-btn i,
+.product-tab-box .review-form .shop-page-title p b,
+.product-tab-box .review-form .add-rating-box .review-box ul li i,
+.product-tab-box .review-form .input-box p span,
+.review-box-holder .single-review-box .text-holder .top .review-box ul li i,
+.comment-meta-box li a:hover,
+.single-product-item .img-holder .overlay-content a:hover,
+.rating-box ul li a:hover,
+.breadcrumb-area .breadcrumb-menu ul li a:hover,
+.brochures-box ul li .left .icon span:before,
+.brochures-box ul li .left h5 a,
+.header-contact-info ul li .title h6 a:hover,
+.single-blog-post-style3 .text-holder .blog-title a:hover,
+.styled-pagination li a:hover,
+.styled-pagination li a.active,
+.portfolio-details-content-box .tag,
+.add-comment-box #add-comment-form button:hover,
+.single-blog-post-style3 .text-holder h4,
+.single-blog-post-style3 .text-holder .button-box .readmore a.btn-one:hover,
+.single-blog-post-style3 .img-holder .overlay a,
+.single-sidebar .project-box .project-lists li a:hover,
+.categories li a:hover,
+.single-contact-info-box .icon span:before,
+.contact-form form button:hover,
+.error-content .title,
+.single-service-style2 .overlay-content .inner-content .icon,
+.footer-menu ul li a:hover,
+.video-holder-box.style2 .icon .inner a span:before,
+.single-portfolio-style2 .overlay-content .title-holder p,
+.single-portfolio-style2 .overlay-content .title-holder h3 a:hover,
+.breadcrumb-area .breadcrumb-menu ul li.active,
+.single-sidebar .ratting-box .ratting-lists li a:hover,
+.scroll-top,
+.service-style1-area .title h1 a{
+    color: #3c9045;    
+}
+
+
+
+.main-menu.style4 .navigation>li:hover>a, 
+.main-menu.style4 .navigation>li.current>a,
+.service-style4-area .title h1 a,
+.about-style4-text-box .inner-contant ul li:before,
+.portfolio-item-style4-content .title-holder span.tag,
+.single-price-box .title h3,
+.header-social-links-style5 .social-links-style2 li a:hover,
+.header-contact-info-style5 li .title h5 a:hover,
+.main-menu.style5 .navigation>li:hover>a,
+.main-menu.style5 .navigation>li.current>a,
+.quote-button-style5 a,
+.service-style6-area .title h1 a,
+.single-service-style6 .text-holder .icon,
+.single-service-style7 h3 a:hover,
+.service-style7-text-box .button-box a:hover,
+.single-portfolio-style5 .title-holder span.tag,
+.single-portfolio-style5 .title-holder h5 a:hover {
+    color: #fd5d14;
+}
+
+
+
+
+
+
+/*==============================================
+   Theme Background Css
+===============================================*/
+.thm_bgclr1,
+.social-links-style1 li a:hover i,
+.main-menu .navigation>li>a span.homeicon,
+.single-portfolio-style1 .img-holder .title-holder:before,
+.testimonial-style1-title-box:before,
+.main-menu.style2 .navigation>li>a span.homeicon,
+.single-service-style3 .overlay-content .icon-holder,
+.video-holder-box-style3 a span:before,
+.slogan-area,
+.slogan-content.style2 .quote-button a,
+.quote-button.style3 a,
+.video-holder-box-style5 .icon .inner a span:before,
+.btn-one:hover,
+.btn-one:focus,
+.owl-nav-style-one.owl-theme .owl-nav [class*="owl-"]:hover,
+.single-footer-widget .page-links li a:hover:before,
+.owl-carousel.owl-dot-style1 .owl-dots .owl-dot.active,
+.accordion-box .accordion .accord-btn.active,
+.slogan-content .quote-button a:hover,
+.quote-button a:hover,
+.main-slider .owl-theme .owl-dots .owl-dot.active,
+.main-slider .owl-theme .owl-dots .owl-dot.active:before,
+.single-service-style1 .text-holder .count-box:before,
+.video-holder-box .icon .inner a span:before,
+.about-style1-text-box .title h1 span,
+.single-service-style2 .img-holder .static-content .icon a,
+.single-portfolio-style1 .img-holder .inner-box .zoom-button a span:before,
+.single-team-member .title-holder:before,
+.single-blog-post .img-holder .post-date p,
+.copyright-text:before,
+.scroll-top:hover,
+.quote-button.style2 a,
+.video-holder-box-style4 a span:before,
+.about-style2-area,
+.single-portfolio-style2 .overlay-content .icon-holder,
+.styled-pagination li.next a,
+.portfolio-single-video-box a span:before,
+.project-info-box,
+.project-info-box.style2,
+.add-comment-box #add-comment-form button,
+.team-member-info-box .social-links-style1 li a:hover i,
+.single-partner-logo-box-style2:hover a img,
+.single-blog-post-style3 .text-holder .button-box .readmore a.btn-one,
+.single-blog-post-style3 .quote-box .icon,
+.single-sidebar .popular-tag li a:before,
+.sidebar-bottom-box .img-holder .overlay a span:before,
+.blog-single-quote-box,
+.contact-form form button,
+.nav-outer .mobile-nav-toggler .inner,
+.single-product-item .img-holder .product-info,
+.single-product-item .img-holder .overlay-content a,
+.shorting-box .selects-box .dropdown-item.active,
+.shorting-box .selects-box .dropdown-item:active,
+.shorting-box .selects-box .dropdown-item:hover,
+.showing-box .selects-box .dropdown-item.active,
+.showing-box .selects-box .dropdown-item:active,
+.showing-box .selects-box .dropdown-item:hover,
+.product-info-box .product-size ul li:hover a,
+.product-info-box .product-size ul li.active a,
+.addto-cart-box .cart-box button.addtocart span:before,
+.addto-cart-box .menu-box ul li a:hover,
+.product-tab-box .tab-btns .tab-btn.active-btn span, 
+.product-tab-box .tab-btns .tab-btn:hover span,
+.estimate-form-box .button-box button:hover,
+.discount-form-box .button-box button:hover,
+.checkout-form-box .button-box button:hover,
+.login-register-area .form button:hover,
+.login-register-area .form .social-icon li a:hover i,
+.share-products-socials ul li a:hover i,
+.single-testimonial-style1.style3 .client-info .icon-box span:before,
+.main-slider .content .btns-box .btn-one,
+.main-slider .content .btns-box .btn-two:hover{
+    background: #3c9045;
+    background-color: #3c9045;
+}
+
+
+
+.quote-button-style4 a,
+.service-style4-area .title h1 a:before,
+.single-service-style4 .text-holder:before,
+.single-service-style5 .counting:before,
+.single-service-style5:before,
+.progress-levels .progress-box .bar .bar-fill,
+.single-team-member-style2 .title-holder:before,
+.contact-style4-area .layer-outer .bg-color,
+.quote-button-style5 a:before,
+.quote-button-style5 a:hover,
+.service-style6-area .title h1 a:before,
+.single-service-style6 .img-holder .inner:before,
+.service-style7-text-box .button-box a,
+.testimonial-style5-area .owl-nav-style-one.owl-theme .owl-nav [class*="owl-"]:hover,
+.single-service-style5 .icon:before,
+.single-testimonial-style4 .inner-content .quote-box:before {
+    background: #fd5d14;
+}
+
+
+
+
+
+
+
+/*==============================================
+   Theme Border Color Css
+===============================================*/
+.login-register-area .form button:hover,
+.login-register-area .form .social-icon li a:hover i,
+.share-products-socials ul li a:hover i,
+.main-slider .content .btns-box .btn-one,
+.main-slider .content .btns-box .btn-two:hover{
+    border-color: #3c9045;    
+}
+
+
+
+
+.single-testimonial-style4 .inner-content:before{
+    border: 4px solid #fd5d14;
+}
+
+
+
+
+
+
+
+
+
+.single-testimonial-style1.style3 .client-info .icon-box span:before {
+    border: 1px solid #fd5d14;
+}
+.scroll-top {
+    border: 2px solid #fd5d14;
+}
+.btn-one {
+    border: 2px solid #3c9045;
+}
+.btn-one:hover,
+.btn-one:focus{
+    border: 2px solid #3c9045;
+}
+.single-blog-post-style3.withbdr {
+    border: 5px solid #fd5d14;
+}
+.mobile-menu .navigation li > a:before {
+    border-left: 5px solid #fd5d14;
+}
+.single-product-item .img-holder .product-info:before {
+    border-right: 20px solid #fd5d14;
+}
+.service-style1-area .title h1 a{
+    border-bottom: 1px solid #fd5d14;
+}
+.single-service-style2 .img-holder .static-content .title:before {
+    border: 2px solid #fd5d14;
+}
+.single-service-style2 .overlay-content .inner-content .text-holder .title:before {
+    border: 2px solid #fd5d14;
+}
+
+
+
+
+.video-galler-outer-bg:before {
+    background-color: rgba(253, 93, 19, 0.80);
+}
+.main-slider .content h3:before{
+    background: rgba(253, 93, 19, 0.40);
+}
+.single-portfolio-slider .slider-pager .thumb-box li a .img-holder:before{
+    background-color: rgba(253, 93, 19, 0.50);
+}
+.single-product-image-holder .slider-pager .thumb-box li .img-holder:before{
+    background-color: rgba(253, 93, 19, 0.70);
+}
+.single-service-style1 .text-holder .count-box {
+    background: #ffeee7;
+}
+.about-style1-text-box.style2 .title h1 span {
+    background: #fb8b57;
+}
+.main-menu .navigation>li:hover>a,
+.main-menu .navigation>li.current>a{
+	color: #fff;
+}
+.single-portfolio-style1 .img-holder .title-holder span.tag {
+    color: #fd5d14;
+    background: rgba(253, 93, 19, 0.20);
+}
+
+
+
+
+
+
+
+.portfolio-item-style4-content .title-holder span.tag,
+.single-portfolio-style5 .title-holder span.tag {
+    background: rgba(253, 93, 19, 0.20);    
+}
+.single-service-style7:before{
+    border: 2px solid #fd5d14;
+}
+
+
+
+
