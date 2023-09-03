@@ -9,6 +9,14 @@ export const getAllPortfolio = async () => {
     }
 }
 
+export const getLatestPortfolio = async () => {
+    try {
+        const response = await AxiosAdmin.get('/portfolio/latest')
+        return response
+    } catch (error) {
+        return error?.response
+    }
+}
 
 export const addPortfolio = async (data) => {
     try {

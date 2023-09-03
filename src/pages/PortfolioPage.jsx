@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { getLatestPortfolio } from "../api/Portfolio";
-import { Link } from "react-router-dom";
+import { getAllPortfolio } from "../api/Portfolio";
 
-const Portfolio = () => {
+const PortfolioPage = () => {
   const [portfolios, setPortfolios] = useState([]);
   const [portfoliosToShow, setPortfoliosToShow] = useState([]);
 
 
   const fetchPortfolios = async () => {
-    await getLatestPortfolio().then((res) => {
+    await getAllPortfolio().then((res) => {
       if (res?.status === 200) {
         const datas = res.data.portfolioData;
         setPortfolios(datas);
@@ -134,16 +133,16 @@ const Portfolio = () => {
 
               
           </div>
-          <div className="row">
+          {/* <div className="row">
             <div className="col-xl-12">
               <div className="all-portfolio-button text-center">
-                <Link to='/portfolio' className="btn-one" >
+                <p className="btn-one" >
                   Our All Portfolio
                   <span className="flaticon-next" />
-                </Link>
+                </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -152,4 +151,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default PortfolioPage;

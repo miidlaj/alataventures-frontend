@@ -4,6 +4,7 @@ import Partner from "../componets/Partner";
 import Contact from "../componets/Contact";
 import About from "../componets/About";
 import Slider from "../componets/Slider";
+import Portfolio from "../componets/Portfolio";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <About />
       {/*End About Style1 Area*/}
 
+      <Portfolio />
 
       {/*Start Contact Form Section*/}
       <Contact />
