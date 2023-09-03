@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/img-redundant-alt */
+
 import React, { useEffect, useState } from "react";
 import { getAllPartnerImagees } from "../api/Partner";
 
@@ -55,7 +54,7 @@ const Partner = () => {
                     <div className="slide">
                       <img
                         src="assets/images/brand/brand-2.png"
-                        alt="Awesome Image"
+                        alt="Awesome "
                         height={100}
                         width={250}
                       />
@@ -63,7 +62,7 @@ const Partner = () => {
                     <div className="slide">
                       <img
                         src="assets/images/brand/brand-3.png"
-                        alt="Awesome Image"
+                        alt="Awesome"
                         height={100}
                         width={250}
                       />

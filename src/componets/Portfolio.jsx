@@ -120,7 +120,7 @@ const Portfolio = () => {
                         <div className="title-holder">
                           <span className="tag">{item.company}</span>
                           <h5>
-                            <a href="#">{item.title}</a>
+                            <p>{item.title}</p>
                           </h5>
                           <p>
                             <span className="flaticon-location-pin" />
@@ -137,10 +137,10 @@ const Portfolio = () => {
           <div className="row">
             <div className="col-xl-12">
               <div className="all-portfolio-button text-center">
-                <a className="btn-one" href="#">
+                <p className="btn-one" >
                   Our All Portfolio
                   <span className="flaticon-next" />
-                </a>
+                </p>
               </div>
             </div>
           </div>

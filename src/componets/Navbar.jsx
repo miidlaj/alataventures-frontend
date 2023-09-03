@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -180,27 +179,27 @@ const Navbar = () => {
             <div className="social-links">
               <ul className="clearfix">
                 <li>
-                  <a href="#">
+                  <a href="www.facebook.com" target="_blank">
                     <span className="fab fa fa-facebook-square" />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="www.facebook.com" target="_blank">
                     <span className="fab fa fa-twitter-square" />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="www.facebook.com" target="_blank">
                     <span className="fab fa fa-pinterest-square" />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="www.facebook.com" target="_blank">
                     <span className="fab fa fa-google-plus-square" />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="www.facebook.com" target="_blank">
                     <span className="fab fa fa-youtube-square" />
                   </a>
                 </li>

@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 const About = () => {
@@ -12,7 +10,7 @@ const About = () => {
               <br /> <br />
               ALATA VENTURES PVT LTD <br /> <br />
               <p style={{ fontSize: "x-large" }}>
-                <a href="#">
+                <p >
                   ALATA VENTURES PVT LTD is a construction company founded by
                   Mr.Mansoor vadakkethil, an experienced entrepreneur in the
                   construction industry.The company operates in Kerala,India,
@@ -21,7 +19,7 @@ const About = () => {
                   gained a strong reputation for its high-quality construction
                   services and has successfully completed numerous projects for
                   prestigious clients..
-                </a>
+                </p>
               </p>
             </h1>
           </div>
@@ -37,13 +35,13 @@ const About = () => {
                 <div className="image-box1">
                   <img
                     src="assets/images/about/about-1.jpg"
-                    alt="Awesome Image"
+                    alt="Awesome"
                   />
                 </div>
                 <div className="image-box2">
                   <img
                     src="assets/images/about/about-2.jpg"
-                    alt="Awesome Image"
+                    alt="Awesome"
                   />
                 </div>
                 <div

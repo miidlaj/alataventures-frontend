@@ -1,5 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -35,22 +35,22 @@ const Footer = () => {
                     <div className="footer-social-links">
                       <ul className="social-links-style1">
                         <li>
-                          <a href="#">
+                          <a href="www.facebook.com" target="_blank">
                             <i className="fa fa-facebook" aria-hidden="true" />
                           </a>
                         </li>
                         <li>
-                          <a href="#">
+                          <a href="www.facebook.com" target="_blank">
                             <i className="fa fa-twitter" aria-hidden="true" />
                           </a>
                         </li>
                         <li>
-                          <a href="#">
+                          <a href="www.facebook.com" target="_blank">
                             <i className="fa fa-pinterest" aria-hidden="true" />
                           </a>
                         </li>
                         <li>
-                          <a href="#">
+                          <a href="www.facebook.com" target="_blank">
                             <i className="fa fa-vimeo" aria-hidden="true" />
                           </a>
                         </li>
@@ -74,38 +74,32 @@ const Footer = () => {
                       <div className="col-xl-6 col-lg-6 col-md-6">
                         <ul className="page-links">
                           <li>
-                            <a href="#">Home</a>
+                            <Link to="/">Home</Link>
                           </li>
                           <li>
-                            <a href="#">About Us</a>
+                            <a href="#about">About Us</a>
                           </li>
                           <li>
-                            <a href="#">Services</a>
+                            <Link to="/portfolio">Portfolio</Link>
                           </li>
                           <li>
-                            <a href="#">Projects</a>
-                          </li>
-                          <li>
-                            <a href="#">Why Us</a>
+                            <Link to="/gallery">Gallery</Link>
                           </li>
                         </ul>
                       </div>
                       <div className="col-xl-6 col-lg-6 col-md-6">
                         <ul className="page-links">
                           <li>
-                            <a href="#">Portfolio</a>
+                            <Link to="/">Home</Link>
                           </li>
                           <li>
-                            <a href="#">Ongoing Projects</a>
+                            <a href="#about">About Us</a>
                           </li>
                           <li>
-                            <a href="#">Our Clients</a>
+                            <Link to="/portfolio">Portfolio</Link>
                           </li>
                           <li>
-                            <a href="#">Brands</a>
-                          </li>
-                          <li>
-                            <a href="#">Contact Us</a>
+                            <Link to="/gallery">Gallery</Link>
                           </li>
                         </ul>
                       </div>
@@ -122,7 +116,7 @@ const Footer = () => {
                 <div className="single-footer-widget">
                   <div className="twitter-feed-box">
                     <h3>
-                      <a href="#">Etiam sapien tortor, dictum</a>
+                      <p >Etiam sapien tortor, dictum</p>
                     </h3>
                     <span>July 21, 2018 10:00 AM</span>
                     <div className="border-box" />
@@ -135,13 +129,13 @@ const Footer = () => {
                     </div>
                     <div className="bottom">
                       <div className="comments">
-                        <a href="#">
+                        <p>
                           <i
                             className="fa fa-commenting-o"
                             aria-hidden="true"
                           />
                           2 comments
-                        </a>
+                        </p>
                       </div>
                       <div className="twitter-icon">
                         <span className="flaticon-twitter-logo-shape" />
@@ -159,19 +153,19 @@ const Footer = () => {
             <div className="outer-box">
               <div className="copyright-text">
                 <p>
-                  Copyright© All Rights Reserved <a href="#">alata ventures.</a>
+                  Copyright© All Rights Reserved <a href="/">alata ventures.</a>
                 </p>
               </div>
               <div className="footer-menu">
                 <ul>
                   <li>
-                    <a href="#">Career</a>
+                    <a href="/">Career</a>
                   </li>
                   <li>
-                    <a href="#">Terms of service</a>
+                    <a href="/">Terms of service</a>
                   </li>
                   <li>
-                    <a href="#">Refund policy</a>
+                    <a href="/">Refund policy</a>
                   </li>
                 </ul>
               </div>
