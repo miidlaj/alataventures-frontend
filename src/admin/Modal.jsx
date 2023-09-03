@@ -185,7 +185,7 @@ const Modal = ({
         />
         <div
           className={`${
-            openModal ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 "
+            openModal ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 hidden "
           } transform transition-opacity duration-300 ease-in-out translate-y-4 py-12 z-50 absolute top-0 right-0 bottom-0 left-0`}
           id="modal"
         >
