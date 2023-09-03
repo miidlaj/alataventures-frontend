@@ -101,7 +101,7 @@ const Navbar = () => {
                             " text-white"
                           }`}
                         >
-                          <a href="/portfolio">Portfolio</a>
+                          <Link to="/portfolio">Portfolio</Link>
                         </li>
                         <li
                           className={`"scrollToLink " ${
@@ -110,6 +110,14 @@ const Navbar = () => {
                           }`}
                         >
                           <Link to="/gallery">Gallery</Link>
+                        </li>
+                        <li
+                          className={`"scrollToLink " ${
+                            location.pathname.includes("/admin") &&
+                            " text-white"
+                          }`}
+                        >
+                          <Link to="/admin">Settings</Link>
                         </li>
                       </ul>
                     </div>
