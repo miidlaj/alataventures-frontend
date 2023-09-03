@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import { addPortfolio, updatePortfolio } from "../api/Portfolio";
+import './Modal.css';
 
 const Modal = ({
   openModal,
