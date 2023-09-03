@@ -14,6 +14,7 @@ AxiosAdmin.interceptors.request.use(function (config) {
 AxiosAdmin.interceptors.response.use(
     (response) => response,
     (error) => {
+      console.log(error);
       if (error.response.status === 401) {
         localStorage.removeItem('token');
         window.location.href='/admin/login'
