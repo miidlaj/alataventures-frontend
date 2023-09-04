@@ -4,6 +4,7 @@ import User from "./routes/User";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
+ 
   return (
     <>
       <BrowserRouter>
@@ -11,6 +12,7 @@ function App() {
             <Route path="/admin/*" element={<Admin />} />
             <Route path="/*" element={<User />} />
           </Routes>
+          
       </BrowserRouter>
     </>
   );

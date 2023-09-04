@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import { addPortfolio, updatePortfolio } from "../api/Portfolio";
-import './Modal.css';
+import "./Modal.css";
+import Loader from "../componets/Loader";
+import ToasterComponent from "../componets/Toaster";
 
 const Modal = ({
   openModal,
@@ -17,6 +19,7 @@ const Modal = ({
   // Define a state object to store form values
   const [formData, setFormData] = useState(selected);
   const [imagePreview, setImagePreview] = useState(selected.imageUrl);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setFormData(selected);
@@ -29,7 +32,7 @@ const Modal = ({
 
     // Check if a file was selected
     if (!file) {
-      toast.error("Please select a file.");
+      toast.error("Please select a file.", { id: "toast" });
       return;
     }
 
@@ -37,7 +40,8 @@ const Modal = ({
     const allowedFormats = ["image/jpeg", "image/png", "image/gif"];
     if (!allowedFormats.includes(file.type)) {
       toast.error(
-        "Invalid file format. Please upload a JPEG, PNG, or GIF image."
+        "Invalid file format. Please upload a JPEG, PNG, or GIF image.",
+        { id: "toast" }
       );
       return;
     }
@@ -45,7 +49,7 @@ const Modal = ({
     // Check file size (4 MB limit)
     const maxSizeInBytes = 4 * 1024 * 1024; // 4 MB
     if (file.size > maxSizeInBytes) {
-      toast.error("File size exceeds the 4 MB limit.");
+      toast.error("File size exceeds the 4 MB limit.", { id: "toast" });
       return;
     }
 
@@ -75,17 +79,17 @@ const Modal = ({
 
   const formSubmitHandler = () => {
     if (formData.title.length === 0 || formData.title.length > 50) {
-      toast.error("Please select a valid title!");
+      toast.error("Please select a valid title!", { id: "toast" });
       return;
     }
 
     if (formData.company.length === 0 || formData.company.length > 50) {
-      toast.error("Please select a valid company!");
+      toast.error("Please select a valid company!", { id: "toast" });
       return;
     }
 
     if (formData.location.length === 0 || formData.location.length > 50) {
-      toast.error("Please select a valid location!");
+      toast.error("Please select a valid location!", { id: "toast" });
       return;
     }
 
@@ -94,7 +98,7 @@ const Modal = ({
         formData.status
       )
     ) {
-      toast.error("Please select a valid status!");
+      toast.error("Please select a valid status!", { id: "toast" });
       return;
     }
 
@@ -106,6 +110,7 @@ const Modal = ({
   };
 
   const updatingPortfolioHandler = async () => {
+    setLoading(true);
     const formDataToSend = new FormData();
 
     formDataToSend.append("title", formData.title);
@@ -123,19 +128,22 @@ const Modal = ({
     await updatePortfolio(formData._id, formDataToSend).then((res) => {
       if (res?.status === 200) {
         console.log(res);
-        toast.success("Portfolio updated successfully!");
+        toast.success("Portfolio updated successfully!", { id: "toast" });
         handleUpdatedPortfolio(res?.data?.existingPortfolio);
         toggleModal(false);
       } else {
-        toast.error(res?.data?.message);
+        toast.error(res?.data?.message || 'Internal Server Error!', { id: "toast" });
       }
     });
+    setLoading(false);
   };
   const newPortfolioHandler = () => {
     if (formData.image === null) {
-      toast.error("Please select a image!");
+      toast.error("Please select a image!", { id: "toast" });
       return;
     }
+
+    setLoading(true);
 
     const formDataToSend = new FormData();
     formDataToSend.append("title", formData.title);
@@ -147,46 +155,26 @@ const Modal = ({
     addPortfolio(formDataToSend).then((res) => {
       console.log(res);
       if (res?.status === 201) {
-        toast.success("Portfolio added successfully!");
+        toast.success("Portfolio added successfully!", { id: "toast" });
         handleNewPortfolio(res?.data?.newPortfolio);
         toggleModal(false);
       } else {
-        toast.error(res?.data?.message);
+        toast.error(res?.data?.message || 'Internal Server Error!', { id: "toast" });
       }
     });
+    setLoading(false);
   };
 
   return (
     <>
+      {loading && <Loader />}
+      <ToasterComponent />
       <div>
-        <Toaster
-          position="top-center"
-          reverseOrder={false}
-          gutter={8}
-          containerClassName=""
-          containerStyle={{}}
-          toastOptions={{
-            // Define default options
-            className: "",
-            duration: 5000,
-            style: {
-              background: "#363636",
-              color: "#fff",
-            },
-
-            // Default options for specific types
-            success: {
-              duration: 3000,
-              theme: {
-                primary: "green",
-                secondary: "black",
-              },
-            },
-          }}
-        />
         <div
           className={`${
-            openModal ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 hidden "
+            openModal
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-4 hidden "
           } transform transition-opacity duration-300 ease-in-out translate-y-4 py-12 z-50 absolute top-0 right-0 bottom-0 left-0`}
           id="modal"
         >
@@ -411,13 +399,13 @@ const Modal = ({
                 <button
                   type="submit"
                   onClick={() => formSubmitHandler()}
-                  className="mr-1 cursor-pointer transition duration-150 ease-in-out hover:bg-gray-100 bg-gray-900 rounded text-white px-8 py-2 text-sm"
+                  className="mr-1 cursor-pointer transition duration-150 ease-in-out hover:bg-gray-100 hover:text-gray-900 bg-gray-900 rounded text-white px-8 py-2 text-sm"
                 >
                   Save
                 </button>
                 <button
                   type="button"
-                  className="cursor-pointer bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:bg-gray-900 border rounded px-8 py-2 text-sm"
+                  className="cursor-pointer bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:bg-gray-900 hover:text-white border rounded px-8 py-2 text-sm"
                   onClick={() => modalHandler(false)}
                 >
                   Cancel

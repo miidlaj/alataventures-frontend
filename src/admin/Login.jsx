@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { adminLogin } from "../api/AdminAuth";
+import ToasterComponent from "../componets/Toaster";
+import Loader from "../componets/Loader";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -10,6 +12,8 @@ const Login = () => {
     username: "",
     password: "",
   });
+  const [loading, setLoading] = useState(false);
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -23,58 +27,37 @@ const Login = () => {
     const usernameRegex = /^[a-zA-Z][a-zA-Z0-9_]{2,19}$/;
 
     if (!usernameRegex.test(formData.username)) {
-      toast.error("Please enter a valid username");
+      toast.error("Please enter a valid username", { id: 'toast'});
     } else {
       const passwordRegex =
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
       if (!passwordRegex.test(formData.password)) {
-        toast.error("Please enter a valid password.");
+        toast.error("Please enter a valid password.", { id: 'toast'});
       } else {
+        setLoading(true);
         await adminLogin(formData).then((res) => {
           if (res?.status === 200) {
             console.log(true);
-            toast.success("Login Success");
+            toast.success("Login Success", { id: 'toast'});
             const token = res?.data?.access_token;
             localStorage.setItem("token", token);
             navigate("/admin/portfolio");
           } else if (res?.status === 401) {
-            toast.error("Username or password is incorrect!");
+            toast.error("Username or password is incorrect!", { id: 'toast'});
           } else {
-            toast.error("Something went wrong.");
+            toast.error("Something went wrong.", { id: 'toast'});
           }
         });
+        setLoading(false);
       }
     }
   };
 
   return (
     <>
-     <Toaster
-        position="top-center"
-        reverseOrder={false}
-        gutter={8}
-        containerClassName=""
-        containerStyle={{}}
-        toastOptions={{
-          // Define default options
-          className: "",
-          duration: 5000,
-          style: {
-            background: "#363636",
-            color: "#fff",
-          },
-
-          // Default options for specific types
-          success: {
-            duration: 3000,
-            theme: {
-              primary: "green",
-              secondary: "black",
-            },
-          },
-        }}
-      />
+        <ToasterComponent/>
+     {loading && <Loader />}
 
       <div className="min-h-screen bg-gray-100 flex flex-col justify-center sm:py-12">
         <div className="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
@@ -131,7 +114,7 @@ const Login = () => {
             <div className="grid grid-cols-2 gap-1">
               <div className="text-center sm:text-left whitespace-nowrap">
                 <button
-                  onClick={() => window.location.replace("/")}
+                  onClick={() => window.location.href = "/"}
                   className="transition duration-200 mx-5 px-5 py-4 cursor-pointer font-normal text-sm rounded-lg text-gray-500 hover:bg-gray-200 focus:outline-none focus:bg-gray-300 focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 ring-inset"
                 >
                   <svg

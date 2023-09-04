@@ -8,6 +8,7 @@ module.exports = {
     "./src/admin/Partner.jsx",
     "./src/admin/Login.jsx",
     "./src/admin/Modal.jsx",
+    "./src/admin/DeleteModal.jsx",
 
      // Add your exclusions here
      "!./src/pages/GalleryPage.jsx", 

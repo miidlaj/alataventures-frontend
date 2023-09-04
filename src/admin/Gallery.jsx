@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import { addImage, deleteImage, getAllImagees } from "../api/Gallery";
+import ToasterComponent from "../componets/Toaster";
+import Loader from "../componets/Loader";
 
 const Gallery = () => {
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(false);
+
 
   const fetchImages = async () => {
+    setLoading(true);
     await getAllImagees().then((res) => {
       if (res?.status === 200) {
         setImages(res?.data?.imageData);
       } else {
-        toast.error(res?.data?.message);
+        toast.error(res?.data?.message || 'Internal Server Error', { id: 'toast'});
       }
     });
+    setLoading(false);
+
   };
 
   useEffect(() => {
@@ -26,7 +33,7 @@ const Gallery = () => {
 
     // Check if a file was selected
     if (!file) {
-      toast.error("Please select a file.");
+      toast.error("Please select a file.", { id: 'toast'});
       return;
     }
 
@@ -34,7 +41,7 @@ const Gallery = () => {
     const allowedFormats = ["image/jpeg", "image/png", "image/gif"];
     if (!allowedFormats.includes(file.type)) {
       toast.error(
-        "Invalid file format. Please upload a JPEG, PNG, or GIF image."
+        "Invalid file format. Please upload a JPEG, PNG, or GIF image.", { id: 'toast'}
       );
       return;
     }
@@ -42,7 +49,7 @@ const Gallery = () => {
     // Check file size (4 MB limit)
     const maxSizeInBytes = 4 * 1024 * 1024; // 4 MB
     if (file.size > maxSizeInBytes) {
-      toast.error("File size exceeds the 4 MB limit.");
+      toast.error("File size exceeds the 4 MB limit.", { id: 'toast'});
       return;
     }
 
@@ -56,19 +63,20 @@ const Gallery = () => {
   };
 
   const handleUploadImage = async () => {
+    setLoading(true);
     const formDataToSend = new FormData();
-    console.log(image);
     formDataToSend.append("image", image);
 
     await addImage(formDataToSend).then((res) => {
       if (res?.status === 201) {
         setImages(images.concat(res?.data?.newImage));
-        toast.success(res?.data?.message);
+        toast.success(res?.data?.message, { id: 'toast'});
         handleCancelUpload();
       } else {
-        toast.error(res?.data?.message);
+        toast.error(res?.data?.message || 'Internal Server Error!', { id: 'toast'});
       }
     });
+    setLoading(false);
   };
 
   const handleCancelUpload = () => {
@@ -76,43 +84,23 @@ const Gallery = () => {
     setImagePreview(null);
   };
 
-  const handleDelete = (img) => {
-    deleteImage(img._id).then((res) => {
+  const handleDelete = async (img) => {
+    setLoading(true);
+    await deleteImage(img._id).then((res) => {
       if (res?.status === 200) {
         setImages(images.filter(x => x._id !== res?.data?.deletedImage?._id));
-        toast.success(res?.data?.message);
+        toast.success(res?.data?.message, { id: 'toast'});
       } else {
-        toast.error(res?.data?.message);
+        toast.error(res?.data?.message || 'Internal Server Error!', { id: 'toast'});
       }
     })
+    setLoading(false);
   }
   return (
     <>
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
-        gutter={8}
-        containerClassName=""
-        containerStyle={{}}
-        toastOptions={{
-          // Define default options
-          className: "",
-          duration: 5000,
-          style: {
-            background: "#363636",
-            color: "#fff",
-          },
+     <ToasterComponent/>
+     {loading && <Loader />}
 
-          // Default options for specific types
-          success: {
-            duration: 3000,
-            theme: {
-              primary: "green",
-              secondary: "black",
-            },
-          },
-        }}
-      />
       <div className="flex-1 px-2 sm:px-0 min-h-screen">
         <div className="flex justify-between items-center">
           <h3 className="text-3xl font-extralight text-white/50">Gallery</h3>

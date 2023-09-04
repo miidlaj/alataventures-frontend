@@ -1,21 +1,29 @@
 import React, { useState } from "react";
-import { getAllPortfolio } from "../api/Portfolio";
+import { deletePortfolio, getAllPortfolio } from "../api/Portfolio";
 import { toast } from "react-hot-toast";
 import Modal from "./Modal";
+import Loader from "../componets/Loader";
+import DeleteModal from "./DeleteModal";
+import ToasterComponent from "../componets/Toaster";
 
 const Portfolio = () => {
-  
   const [portfolios, setPortfolios] = React.useState([]);
+  const [loading, setLoading] = useState(false);
+  const [deleteSelected, setDeleteSelected] = useState(null);
+  const [deleteModal, setDeleteModal] = useState(false);
+
 
   const fetchPortfolios = () => {
+    setLoading(true);
     getAllPortfolio().then((res) => {
       console.log(res);
       if (res?.status === 200) {
         setPortfolios(res?.data?.portfolioData);
       } else {
-        toast.error("Could not load portfolio data!");
+        toast.error("Could not load portfolio data!", { id: 'toast'});
       }
     });
+    setLoading(false);
   };
   React.useEffect(() => {
     fetchPortfolios();
@@ -41,14 +49,41 @@ const Portfolio = () => {
   };
 
   const handleUpdatedPortfolio = (existingPortfolio) => {
-    setPortfolios((portfolios.filter(x => x._id !== existingPortfolio._id)).concat(existingPortfolio));
-    
+    setPortfolios(
+      portfolios
+        .filter((x) => x._id !== existingPortfolio._id)
+        .concat(existingPortfolio)
+    );
   };
 
   const handlePortfolioClick = (portfolio) => {
-    setSetselected({...portfolio, image: null});
+    setSetselected({ ...portfolio, image: null });
     console.log(selected);
     setOpenModal(true);
+  };
+
+  const handleDelete = async (portfolio) => {
+    handleCancelDelete();
+    setLoading(true);
+    await deletePortfolio(portfolio._id).then((res) => {
+      if (res?.status === 200) {
+        setPortfolios(portfolios.filter(x => x._id !== res?.data?.deletedPortfolio?._id));
+        toast.success(res?.data?.message, { id: 'toast'});
+      } else {
+        toast.error(res?.data?.messag || 'Internal Server Error!', { id: 'toast'});
+      }
+    })
+
+    setLoading(false);
+  }
+
+  const handleDeleteModal = (portfolio) => {
+    setDeleteModal(true);
+    setDeleteSelected(portfolio);
+  }
+  const handleCancelDelete = () => {
+    setDeleteModal(false);
+    setDeleteSelected(null);
   }
 
   const handleNewPortfolioModal = () => {
@@ -62,26 +97,25 @@ const Portfolio = () => {
       imageUrl: "",
     });
     setOpenModal(true);
-  }
+  };
   return (
     <>
-      
+      {loading && <Loader />}
+      <ToasterComponent/>
+      {deleteModal && deleteSelected !== null && <DeleteModal handleCancel={handleCancelDelete} entity={'Portfolio'} handleDelete={handleDelete} data={deleteSelected}/>}
       <div className="flex-1 px-2 sm:px-0 min-h-screen">
+        <Modal
+          openModal={openModal}
+          toggleModal={toggleModal}
+          handleNewPortfolio={handleNewPortfolio}
+          handleUpdatedPortfolio={handleUpdatedPortfolio}
+          selected={selected}
+        />
 
-      <Modal
-        openModal={openModal}
-        toggleModal={toggleModal}
-        handleNewPortfolio={handleNewPortfolio}
-        handleUpdatedPortfolio={handleUpdatedPortfolio}
-        selected={selected}
-      />
-      
         <div className="flex justify-between items-center">
           <h3 className="text-3xl font-extralight text-white/50">Portfolio</h3>
           <div className="inline-flex items-center space-x-2">
-            <p
-              className="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover"
-            >
+            <p className="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -97,9 +131,7 @@ const Portfolio = () => {
                 />
               </svg>
             </p>
-            <p
-              className="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover"
-            >
+            <p className="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -151,10 +183,14 @@ const Portfolio = () => {
 
           {portfolios.length !== 0 &&
             portfolios.map((portfolio) => (
-              <div key={portfolio.title} onClick={() => handlePortfolioClick(portfolio)} className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover">
+              <div
+                key={portfolio.title}
+                className="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover"
+              >
                 <img
                   className="w-20 h-20 object-cover object-center rounded-full"
                   src={portfolio.imageUrl}
+                  onClick={() => handlePortfolioClick(portfolio)}
                   alt="not-loaded"
                 />
                 <h4 className="text-white text-xl capitalize text-center">
@@ -168,6 +204,26 @@ const Portfolio = () => {
                 <p className="text-white/50 absolute bottom-2 text-sm">
                   {portfolio.location}
                 </p>
+
+                <div className="absolute top-0 right-2">
+                  <button onClick={() => handleDeleteModal(portfolio)} className="inline-flex items-center px-2 py-2 bg-transparent hover:bg-red-700 hover:text-white transition duration-300 ease-in-out text-red-700 text-sm font-medium rounded-md">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                      />
+                    </svg>
+                    
+                  </button>
+                </div>
               </div>
             ))}
         </div>

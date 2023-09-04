@@ -15,9 +15,9 @@ const Dashboard = () => {
           <AdminNav />
           {/* Content */}
           <Routes>
-            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/partners" element={<Partners />} />
+            <Route path="/*" element={<Portfolio />} />
           </Routes>
         </div>
       </div>

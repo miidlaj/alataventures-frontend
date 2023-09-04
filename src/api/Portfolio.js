@@ -35,3 +35,12 @@ export const updatePortfolio = async (portfolioId ,data) => {
         return error?.response
     }
 }
+
+export const deletePortfolio = async (portfolioId) => {
+    try {
+        const response = await AxiosAdmin.delete('/portfolio/' + portfolioId)
+        return response
+    } catch (error) {
+        return error?.response
+    }
+}
