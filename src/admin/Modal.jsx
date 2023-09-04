@@ -127,7 +127,6 @@ const Modal = ({
 
     await updatePortfolio(formData._id, formDataToSend).then((res) => {
       if (res?.status === 200) {
-        console.log(res);
         toast.success("Portfolio updated successfully!", { id: "toast" });
         handleUpdatedPortfolio(res?.data?.existingPortfolio);
         toggleModal(false);

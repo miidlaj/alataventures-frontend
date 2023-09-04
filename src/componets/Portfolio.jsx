@@ -92,6 +92,7 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="row filter-layout masonary-layout">
+
             {portfoliosToShow.length !== 0 && portfoliosToShow.map((item) => (
                   <div
                     key={item._id}

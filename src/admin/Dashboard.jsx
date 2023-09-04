@@ -17,7 +17,7 @@ const Dashboard = () => {
           <Routes>
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/partners" element={<Partners />} />
-            <Route path="/*" element={<Portfolio />} />
+            <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
         </div>
       </div>
