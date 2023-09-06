@@ -6,7 +6,6 @@ const Portfolio = () => {
   const [portfolios, setPortfolios] = useState([]);
   const [portfoliosToShow, setPortfoliosToShow] = useState([]);
 
-
   const fetchPortfolios = async () => {
     await getLatestPortfolio().then((res) => {
       if (res?.status === 200) {
@@ -17,23 +16,21 @@ const Portfolio = () => {
     });
   };
 
-  const [tab, setTab] = useState('ALL')
+  const [tab, setTab] = useState("ALL");
 
   const handleTabChange = (tabName) => {
-    if (tabName === 'ALL') {
+    if (tabName === "ALL") {
       setPortfoliosToShow(portfolios);
     } else {
-      setPortfoliosToShow(portfolios.filter(x => x.status === tabName))
+      setPortfoliosToShow(portfolios.filter((x) => x.status === tabName));
     }
-    setTab(tabName)
-  }
-
+    setTab(tabName);
+  };
 
   useEffect(() => {
     fetchPortfolios();
   }, []);
 
-  
   return (
     <>
       <section
@@ -57,31 +54,46 @@ const Portfolio = () => {
                 data-wow-duration="1500ms"
               >
                 <ul className="project-filter clearfix post-filter has-dynamic-filters-counter">
-                <li onClick={() => handleTabChange('ALL')} className={`${tab === 'ALL' && 'active'}`}>
-                  <span className="filter-text">
+                  <li
+                    onClick={() => handleTabChange("ALL")}
+                    className={`${tab === "ALL" && "active"}`}
+                  >
+                    <span className="filter-text">
                       <i className="flaticon-menu" />
                       All
                     </span>
                   </li>
-                  <li onClick={() => handleTabChange('EXECUTED')} className={`${tab === 'EXECUTED' && 'active'}`}>
+                  <li
+                    onClick={() => handleTabChange("EXECUTED")}
+                    className={`${tab === "EXECUTED" && "active"}`}
+                  >
                     <span className="filter-text">
                       <i className="flaticon-menu" />
                       Executed
                     </span>
                   </li>
-                  <li onClick={() => handleTabChange('ONGOING')} className={`${tab === 'ONGOING' && 'active'}`}>
+                  <li
+                    onClick={() => handleTabChange("ONGOING")}
+                    className={`${tab === "ONGOING" && "active"}`}
+                  >
                     <span className="filter-text">
                       <i className="flaticon-building" />
                       Ongoing
                     </span>
                   </li>
-                  <li onClick={() => handleTabChange('YET_TO_COMMENCE')} className={`${tab === 'YET_TO_COMMENCE' && 'active'}`}>
+                  <li
+                    onClick={() => handleTabChange("YET_TO_COMMENCE")}
+                    className={`${tab === "YET_TO_COMMENCE" && "active"}`}
+                  >
                     <span className="filter-text">
                       <i className="flaticon-modern-bridge-road-symbol" />
                       Yet to Commence
                     </span>
                   </li>
-                  <li onClick={() => handleTabChange('UPCOMING')} className={`${tab === 'UPCOMING' && 'active'}`}>
+                  <li
+                    onClick={() => handleTabChange("UPCOMING")}
+                    className={`${tab === "UPCOMING" && "active"}`}
+                  >
                     <span className="filter-text">
                       <i className="flaticon-house" />
                       Upcoming
@@ -92,53 +104,59 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="row filter-layout masonary-layout">
-
-            {portfoliosToShow.length !== 0 && portfoliosToShow.map((item) => (
-                  <div
-                    key={item._id}
-                    className={`col-xl-4 col-lg-6 col-md-6`}
-                  >
-                    <div className="single-portfolio-style1">
-                      <div className="img-holder">
-                        <div className="inner-box">
-                          <img src={item.imageUrl} alt="" />
-                          <div className="overlay-style-one">
-                            <div className="box">
-                              <div className="inner">
-                                <div className="zoom-button">
-                                  <a
-                                    className="lightbox-image"
-                                    data-fancybox="gallery"
-                                    href={item.imageUrl}
-                                  >
-                                    <span className="flaticon-plus" />
-                                  </a>
-                                </div>
+            {portfoliosToShow.length !== 0 &&
+              portfoliosToShow.map((item) => (
+                <div key={item._id} className={`col-xl-4 col-lg-6 col-md-6`}>
+                  <div className="single-portfolio-style1">
+                    <div className="img-holder">
+                      <div className="inner-box">
+                        <div className="flex justify-center">
+                          <img
+                            src={item.imageUrl}
+                            alt=""
+                            style={{
+                              maxWidth: "100%",
+                              maxHeight: "500px",
+                              width: "auto",
+                              height: "auto",
+                            }}
+                          />
+                        </div>
+                        <div className="overlay-style-one">
+                          <div className="box">
+                            <div className="inner">
+                              <div className="zoom-button">
+                                <a
+                                  className="lightbox-image"
+                                  data-fancybox="gallery"
+                                  href={item.imageUrl}
+                                >
+                                  <span className="flaticon-plus" />
+                                </a>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div className="title-holder">
-                          <span className="tag">{item.company}</span>
-                          <h5>
-                            <p>{item.title}</p>
-                          </h5>
-                          <p>
-                            <span className="flaticon-location-pin" />
-                            {item.location}
-                          </p>
-                        </div>
+                      </div>
+                      <div className="title-holder">
+                        <span className="tag">{item.company}</span>
+                        <h5>
+                          <p>{item.title}</p>
+                        </h5>
+                        <p>
+                          <span className="flaticon-location-pin" />
+                          {item.location}
+                        </p>
                       </div>
                     </div>
                   </div>
+                </div>
               ))}
-
-              
           </div>
           <div className="row">
             <div className="col-xl-12">
               <div className="all-portfolio-button text-center">
-                <Link to='/portfolio' className="btn-one" >
+                <Link to="/portfolio" className="btn-one">
                   Our All Portfolio
                   <span className="flaticon-next" />
                 </Link>
@@ -147,8 +165,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
-  
     </>
   );
 };

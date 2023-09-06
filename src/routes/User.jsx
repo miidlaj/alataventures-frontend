@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import GalleryPage from "../pages/GalleryPage";
 import Navbar from "../componets/Navbar";
 import PortfolioPage from "../pages/PortfolioPage";
+import Footer from "../componets/Footer";
 
 const User = () => {
 
@@ -21,6 +22,10 @@ const User = () => {
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/*" element={<Home />} />
         </Routes>
+
+         {/*Start footer area*/}
+      <Footer />
+      {/*End footer area*/}
       </div>
       <button className="scroll-top scroll-to-target" data-target="html">
         <span className="icon-angle" />

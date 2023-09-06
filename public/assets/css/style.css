@@ -1459,6 +1459,11 @@ select:focus {
     display: block;
     padding: 15px 0;
 }
+
+.sticky-header .logo img{
+    width: auto;
+    max-width: 130px;
+}
 .sticky-header .logo a{
     position: relative;
     display: inline-block;
@@ -1469,9 +1474,6 @@ select:focus {
 .sticky-header .main-menu .navigation> li> a{
     color: #998349;
 }
-
-
-
 
 .header-top {
     position: relative;
@@ -1625,6 +1627,7 @@ select:focus {
 }
 .header-upper-left .logo a img{
     width: auto;
+    max-width: 130px;
 }
 
 .header-upper-right{
@@ -2395,7 +2398,6 @@ select:focus {
     left: 0;
     top: 0;
     right: 0;
-    background: url(../images/icon/services/service-title-icon.png);
     width: 200px;
     height: 158px;
     margin: 0 auto;

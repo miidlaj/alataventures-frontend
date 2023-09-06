@@ -6,11 +6,19 @@ const About = () => {
       <section className="service-style1-area">
         <div className="container">
           <div className="title">
+            <div className="flex justify-center">
+              <img
+                src="assets/images/logo/alata logo 2.png"
+                alt="logo"
+                height={"200px"}
+                width={"200px"}
+              />
+            </div>
             <h1>
-              <br /> <br />
+              <br />
               ALATA VENTURES PVT LTD <br /> <br />
               <p style={{ fontSize: "x-large" }}>
-                <p >
+                <p>
                   ALATA VENTURES PVT LTD is a construction company founded by
                   Mr.Mansoor vadakkethil, an experienced entrepreneur in the
                   construction industry.The company operates in Kerala,India,
@@ -33,16 +41,10 @@ const About = () => {
               <div className="about-style1-image-box clearfix">
                 <div className="shape zoom-fade" />
                 <div className="image-box1">
-                  <img
-                    src="assets/images/about/about-1.jpg"
-                    alt="Awesome"
-                  />
+                  <img src="assets/images/about/about-1.jpg" alt="Awesome" />
                 </div>
                 <div className="image-box2">
-                  <img
-                    src="assets/images/about/about-2.jpg"
-                    alt="Awesome"
-                  />
+                  <img src="assets/images/about/about-2.jpg" alt="Awesome" />
                 </div>
                 <div
                   className="video-holder-box"

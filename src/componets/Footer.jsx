@@ -16,13 +16,14 @@ const Footer = () => {
                 <div className="single-footer-widget">
                   <div className="our-company-info">
                     <div className="footer-logo">
-                      <a href="index.html">
+                      <Link to="/l">
                         <img
-                          src="assets/images/footer/footer-logo.png"
+                          src="assets/images/logo/alata logo.png"
                           alt="Awesome Footer Logo"
                           title="Logo"
+                          style={{maxWidth: '200px'}}
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="text">
                       <p>
@@ -65,7 +66,7 @@ const Footer = () => {
                 className="col-xl-4 col-lg-4 col-md-9 col-sm-12 wow animated fadeInUp"
                 data-wow-delay="0.5s"
               >
-                <div className="single-footer-widget margin50-0">
+                <div className="single-footer-widget margin50-0 pt-3">
                   <div className="title">
                     <h3>Information</h3>
                   </div>
@@ -109,7 +110,7 @@ const Footer = () => {
               </div>
               {/*End single footer widget*/}
               {/*Start single footer widget*/}
-              <div
+              {/* <div
                 className="col-xl-5 col-lg-5 col-md-12 col-sm-12 wow animated fadeInUp"
                 data-wow-delay="0.7s"
               >
@@ -143,7 +144,7 @@ const Footer = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/*End single footer widget*/}
             </div>
           </div>

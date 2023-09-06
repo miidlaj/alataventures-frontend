@@ -1,11 +1,28 @@
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  // Listen for scroll events and update the scroll position
+  useEffect(() => {
+    function handleScroll() {
+      setScrollPosition(window.scrollY);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
   const location = useLocation();
   return (
     <>
-      <header className="main-header">
+      <header className={`main-header ${scrollPosition >= 250 ? 'fixed-header' : ''}`}>
         {/*Start Header upper */}
         <div className="header-upper">
           <div className="container clearfix">
@@ -14,7 +31,7 @@ const Navbar = () => {
                 <div className="logo">
                   <Link to="/">
                     <img
-                      src="assets/images/resources/alata-logo.jpg"
+                      src="assets/images/logo/alata logo.png"
                       alt="Awesome Logo"
                       title=""
                     />
@@ -101,7 +118,7 @@ const Navbar = () => {
                             " text-white"
                           }`}
                         >
-                          <Link to="/portfolio">Portfolio</Link>
+                          <Link to="/portfolio">Portfolios</Link>
                         </li>
                         <li
                           className={`"scrollToLink " ${
@@ -145,19 +162,53 @@ const Navbar = () => {
             <div className="clearfix">
               {/*Logo*/}
               <div className="logo float-left">
-                <a href="index.html" className="img-responsive">
+                <Link to="/" className="img-responsive">
                   <img
-                    src="assets/images/resources/alata-logo.jpg"
-                    alt=""
+                    src="assets/images/logo/alata logo.png"
+                    alt="Logo"
                     title=""
                   />
-                </a>
+                </Link>
               </div>
               {/*Right Col*/}
               <div className="right-col float-right">
                 {/* Main Menu */}
                 <nav className="main-menu clearfix">
-                  {/*Keep This Empty / Menu will come through Javascript*/}
+                <ul className="navigation clearfix mainmenu one-page-scroll-menu">
+                        <li className="scrollToLink">
+                          <Link to={"/"} className="home-icon" href="#banner">
+                            <span className="hometext">Home</span>
+                            <span className="flaticon-real-estate homeicon" />
+                          </Link>
+                        </li>
+                        <li className="scrollToLink">
+                          <a href="#about">About</a>
+                        </li>
+                        <li
+                          className={`"scrollToLink " ${
+                            location.pathname.includes("/portfolio") &&
+                            " text-white"
+                          }`}
+                        >
+                          <Link to="/portfolio">Portfolios</Link>
+                        </li>
+                        <li
+                          className={`"scrollToLink " ${
+                            location.pathname.includes("/gallery") &&
+                            " text-white"
+                          }`}
+                        >
+                          <Link to="/gallery">Gallery</Link>
+                        </li>
+                        {/* <li
+                          className={`"scrollToLink " ${
+                            location.pathname.includes("/admin") &&
+                            " text-white"
+                          }`}
+                        >
+                          <Link to="/admin">Settings</Link>
+                        </li> */}
+                      </ul>
                 </nav>
               </div>
             </div>

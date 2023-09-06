@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { sendMail } from "../api/Contact";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
   const [successMessage, setSucessMessage] = useState("");
@@ -31,12 +32,30 @@ const Contact = () => {
     setFormKey((prevKey) => prevKey + 1);
   };
 
+  const scrollToElement = () => {
+    const element = document.getElementById('contact');
+    
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash === '#contact') {
+      scrollToElement();
+    }
+  
+   
+  }, [location.hash])
+
   return (
     <>
+
       <section id="contact" className="contact-form-area mt-5">
         <div className="auto-container">
           <div className="row clearfix">
-            <div className="col-xl-7 col-lg-7 col-md-12">
+            <div className="col-xl-7 col-lg-7 col-md-12 pb-5">
               <div className="contact-form">
                 <div className="title">
                   <h3>Leave Reply</h3>

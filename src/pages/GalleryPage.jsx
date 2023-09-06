@@ -54,11 +54,17 @@ const GalleryPage = () => {
       />
       <section className="portfolio-section" id="portfolio" style={{marginTop: "200px"}}>
         <div className="container-fluid">
-          <div className="row">
+        <div className="sec-title text-center">
+            <div className="big-title black-clr">
+              <h1>Gallery</h1>
+            </div>
+          </div>
+          
+          {/* <div className="row">
             <div className="col-lg-12 text-center">
               <h2>Project Gallery</h2>
             </div>
-          </div>
+          </div> */}
           
           <ul className="row portfolio-item">
             

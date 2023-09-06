@@ -99,7 +99,12 @@ const PortfolioPage = () => {
                     <div className="single-portfolio-style1">
                       <div className="img-holder">
                         <div className="inner-box">
-                          <img src={item.imageUrl} alt="" />
+                          <img src={item.imageUrl} alt="" style={{
+                              maxWidth: "100%",
+                              maxHeight: "500px",
+                              width: "auto",
+                              height: "auto",
+                            }} />
                           <div className="overlay-style-one">
                             <div className="box">
                               <div className="inner">
