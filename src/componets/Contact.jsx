@@ -58,7 +58,7 @@ const Contact = () => {
             <div className="col-xl-7 col-lg-7 col-md-12 pb-5">
               <div className="contact-form">
                 <div className="title">
-                  <h3>Leave Reply</h3>
+                  <h3>Your project starts with a conversation. Contact us now, and let's begin building together</h3>
                 </div>
                 <div className="inner-box">
                   <form
@@ -229,7 +229,7 @@ const Contact = () => {
                     </div>
                     <div className="text">
                       <p>
-                        ALATA VENTURE PRIVATE LIMITED
+                        ALATA VENTURES PRIVATE LIMITED
                         <br /> 6/146, Vadakkethil,{" "}
                       </p>
                     </div>

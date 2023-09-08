@@ -21,7 +21,7 @@ const Footer = () => {
                           src="assets/images/logo/alata logo.png"
                           alt="Awesome Footer Logo"
                           title="Logo"
-                          style={{maxWidth: '200px'}}
+                          style={{ maxWidth: "200px" }}
                         />
                       </Link>
                     </div>
@@ -89,7 +89,7 @@ const Footer = () => {
                         </ul>
                       </div>
                       <div className="col-xl-6 col-lg-6 col-md-6">
-                        <ul className="page-links">
+                        {/* <ul className="page-links">
                           <li>
                             <Link to="/">Home</Link>
                           </li>
@@ -102,7 +102,7 @@ const Footer = () => {
                           <li>
                             <Link to="/gallery">Gallery</Link>
                           </li>
-                        </ul>
+                        </ul> */}
                       </div>
                     </div>
                   </div>
@@ -110,41 +110,31 @@ const Footer = () => {
               </div>
               {/*End single footer widget*/}
               {/*Start single footer widget*/}
-              {/* <div
+              <div
                 className="col-xl-5 col-lg-5 col-md-12 col-sm-12 wow animated fadeInUp"
                 data-wow-delay="0.7s"
               >
                 <div className="single-footer-widget">
                   <div className="twitter-feed-box">
                     <h3>
-                      <p >Etiam sapien tortor, dictum</p>
+                      <p>Alata Ventures</p>
                     </h3>
-                    <span>July 21, 2018 10:00 AM</span>
+                    <span>Sep 7, 2023 10:00 AM</span>
                     <div className="border-box" />
                     <div className="text">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elieiusmod tempor incididunt ut labore et dolore magn
-                        aliqua. Ut enim ad minim veniam.
+                        Building Dreams, Crafting Excellence. Alata Ventures -
+                        Your Trusted Construction Partner
                       </p>
                     </div>
                     <div className="bottom">
-                      <div className="comments">
-                        <p>
-                          <i
-                            className="fa fa-commenting-o"
-                            aria-hidden="true"
-                          />
-                          2 comments
-                        </p>
-                      </div>
                       <div className="twitter-icon">
                         <span className="flaticon-twitter-logo-shape" />
                       </div>
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div>
               {/*End single footer widget*/}
             </div>
           </div>
@@ -158,7 +148,7 @@ const Footer = () => {
                 </p>
               </div>
               <div className="footer-menu">
-                <ul>
+                {/* <ul>
                   <li>
                     <a href="/">Career</a>
                   </li>
@@ -168,7 +158,7 @@ const Footer = () => {
                   <li>
                     <a href="/">Refund policy</a>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
           </div>

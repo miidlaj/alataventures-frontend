@@ -157,7 +157,7 @@ const Portfolio = () => {
             <div className="col-xl-12">
               <div className="all-portfolio-button text-center">
                 <Link to="/portfolio" className="btn-one">
-                  Our All Portfolio
+                  View More
                   <span className="flaticon-next" />
                 </Link>
               </div>

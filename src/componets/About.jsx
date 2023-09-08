@@ -1,4 +1,5 @@
 import React from "react";
+import "./About.css";
 
 const About = () => {
   return (
@@ -18,16 +19,14 @@ const About = () => {
               <br />
               ALATA VENTURES PVT LTD <br /> <br />
               <p style={{ fontSize: "x-large" }}>
-                <p>
-                  ALATA VENTURES PVT LTD is a construction company founded by
-                  Mr.Mansoor vadakkethil, an experienced entrepreneur in the
-                  construction industry.The company operates in Kerala,India,
-                  and specializes in undertaking various construction
-                  projects,particularly government works. Alata Ventures has
-                  gained a strong reputation for its high-quality construction
-                  services and has successfully completed numerous projects for
-                  prestigious clients..
-                </p>
+                ALATA VENTURES PVT LTD is a construction company founded by
+                Mr.Mansoor vadakkethil, an experienced entrepreneur in the
+                construction industry.The company operates in Kerala, India and
+                specializes in undertaking various construction projects,
+                particularly government works. Alata Ventures has gained a
+                strong reputation for its high-quality construction services and
+                has successfully completed numerous projects for prestigious
+                clients..
               </p>
             </h1>
           </div>
@@ -98,6 +97,84 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* <main className="out-team">
+        <section>
+          <h1 className="page-title">Alataventures</h1>
+        </section>
+        <div className="leadership">
+          <div className="leader">
+            <div className="leader__header">
+              <div className="leader__exp">
+                <span className="years">8</span>
+                <span>years</span>
+              </div>
+              <a href="/" className="leader__bio">
+                Bio
+              </a>
+            </div>
+            <div className="leader__img">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                alt="Amanda Maynard"
+              />
+            </div>
+            <div className="leader__name">
+              <h2>MOHAMMED SANOOB</h2>
+              <p>
+                <em>President, STEM</em>
+              </p>
+            </div>
+          </div>
+          <div className="leader">
+            <div className="leader__header">
+              <div className="leader__exp">
+                <span className="years">6</span>
+                <span>years</span>
+              </div>
+              <a href="#" className="leader__bio">
+                Bio
+              </a>
+            </div>
+            <div className="leader__img">
+              <img
+                src="https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1365&q=80"
+                alt="Sammy Cotillard"
+              />
+            </div>
+            <div className="leader__name">
+              <h2>Sammy Cotillard</h2>
+              <p>
+                <em>Vice President, STEM</em>
+              </p>
+            </div>
+          </div>
+          <div className="leader">
+            <div className="leader__header">
+              <div className="leader__exp">
+                <span className="years">5</span>
+                <span>years</span>
+              </div>
+              <a href="#" className="leader__bio">
+                Bio
+              </a>
+            </div>
+            <div className="leader__img">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                alt="Todd Fletcher"
+              />
+            </div>
+            <div className="leader__name">
+              <h2>Todd Fletcher</h2>
+              <p>
+                <em>Chief Financial Officer</em>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main> */}
+      
     </>
   );
 };
