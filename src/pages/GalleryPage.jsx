@@ -46,6 +46,12 @@ const GalleryPage = () => {
                   src={img.imageUrl}
                   itemProp="thumbnail"
                   alt="not loaded"
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "400px",
+                    width: "auto",
+                    height: "auto",
+                  }}
                 />
                 <div className="portfolio-overlay">
                   <div className="overlay-content">
