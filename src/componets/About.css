@@ -58,30 +58,27 @@
 }
 
 .out-team .leadership {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
 }
-@media (min-width: 32em) {
+@media screen and (max-width: 768px) {
+  
+}
+
+@media screen and (max-width: 640px) {
   .out-team .leadership {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    flex-direction: column;
 }
-@media (min-width: 50em) {
-  .out-team .leadership {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
+
 .out-team .leadership .leader {
   width: 100%;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
   margin: auto;
+  max-width: 300px;
 }
-@media (min-width: 32em) {
-  .out-team .leadership .leader {
-    max-width: 300px;
-  }
-}
+
 .out-team .leadership .leader:hover {
   cursor: pointer;
 }

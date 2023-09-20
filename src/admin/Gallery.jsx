@@ -21,7 +21,6 @@ const Gallery = () => {
       }
     });
     setLoading(false);
-
   };
 
   useEffect(() => {

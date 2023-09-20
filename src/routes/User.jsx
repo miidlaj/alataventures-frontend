@@ -20,7 +20,7 @@ const User = () => {
         <Routes>
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/company" element={<AboutPage />} />
           <Route path="/*" element={<Home />} />
         </Routes>
 

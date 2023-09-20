@@ -15,8 +15,8 @@ const Partners = () => {
   const [loading, setLoading] = useState(false);
 
   const fetchImages = async () => {
+    setLoading(true)
     await getAllPartnerImagees().then((res) => {
-      setLoading(true);
       if (res?.status === 200) {
         setImages(res?.data?.imageData);
       } else {

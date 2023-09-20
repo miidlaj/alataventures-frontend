@@ -8,6 +8,7 @@ const OurTeam = () => {
           <h1 className="page-title">Our Team</h1>
         </section>
         <div className="leadership">
+          <div className="flex justify-end">
           <div className="leader">
             <div className="leader__header">
               <div className="leader__exp">
@@ -92,6 +93,9 @@ const OurTeam = () => {
               {/* <p>Managing Director</p> */}
             </div>
           </div>
+          </div>
+          <div className="flex justify-start">
+
           <div className="leader">
             <div className="leader__header">
               <div className="leader__exp">
@@ -247,6 +251,7 @@ const OurTeam = () => {
             Director
           </p> */}
             </div>
+          </div>
           </div>
           {/* <div className="leader">
         <div className="leader__header">

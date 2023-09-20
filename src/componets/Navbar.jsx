@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-
   const [scrollPosition, setScrollPosition] = useState(0);
 
   // Listen for scroll events and update the scroll position
@@ -11,18 +10,19 @@ const Navbar = () => {
       setScrollPosition(window.scrollY);
     }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   const location = useLocation();
   return (
     <>
-      <header className={`main-header ${scrollPosition >= 250 ? 'fixed-header' : ''}`}>
+      <header
+        className={`main-header ${scrollPosition >= 250 ? "fixed-header" : ""}`}
+      >
         {/*Start Header upper */}
         <div className="header-upper">
           <div className="container clearfix">
@@ -109,11 +109,14 @@ const Navbar = () => {
                             <span className="flaticon-real-estate homeicon" />
                           </Link>
                         </li>
-                        <li className="scrollToLink">
-                          <Link to="/about">About</Link>
+                        <li  className={`scrollToLink ${
+                            location.pathname.includes("/company") &&
+                            " text-white"
+                          }`}>
+                          <Link to="/company">About</Link>
                         </li>
                         <li
-                          className={`"scrollToLink " ${
+                          className={`scrollToLink ${
                             location.pathname.includes("/portfolio") &&
                             " text-white"
                           }`}
@@ -121,7 +124,7 @@ const Navbar = () => {
                           <Link to="/portfolio">Portfolios</Link>
                         </li>
                         <li
-                          className={`"scrollToLink " ${
+                          className={`scrollToLink ${
                             location.pathname.includes("/gallery") &&
                             " text-white"
                           }`}
@@ -174,33 +177,35 @@ const Navbar = () => {
               <div className="right-col float-right">
                 {/* Main Menu */}
                 <nav className="main-menu clearfix">
-                <ul className="navigation clearfix mainmenu one-page-scroll-menu">
-                        <li className="scrollToLink">
-                          <Link to={"/"} className="home-icon" href="#banner">
-                            <span className="hometext">Home</span>
-                            <span className="flaticon-real-estate homeicon" />
-                          </Link>
-                        </li>
-                        <li className="scrollToLink">
-                          <Link to={"/about"}>About</Link>
-                        </li>
-                        <li
-                          className={`"scrollToLink " ${
-                            location.pathname.includes("/portfolio") &&
-                            " text-white"
-                          }`}
-                        >
-                          <Link to="/portfolio">Portfolios</Link>
-                        </li>
-                        <li
-                          className={`"scrollToLink " ${
-                            location.pathname.includes("/gallery") &&
-                            " text-white"
-                          }`}
-                        >
-                          <Link to="/gallery">Gallery</Link>
-                        </li>
-                        {/* <li
+                  <ul className="navigation clearfix mainmenu one-page-scroll-menu">
+                    <li className="scrollToLink">
+                      <Link to={"/"} className="home-icon" href="#banner">
+                        <span className="hometext">Home</span>
+                        <span className="flaticon-real-estate homeicon" />
+                      </Link>
+                    </li>
+                    <li  className={`scrollToLink ${
+                        location.pathname.includes("/company") &&
+                        " text-white"
+                      }`}>
+                      <Link to={"/company"}>About</Link>
+                    </li>
+                    <li
+                      className={`scrollToLink ${
+                        location.pathname.includes("/portfolio") &&
+                        " text-white"
+                      }`}
+                    >
+                      <Link to="/portfolio">Portfolios</Link>
+                    </li>
+                    <li
+                      className={`scrollToLink ${
+                        location.pathname.includes("/gallery") && " text-white"
+                      }`}
+                    >
+                      <Link to="/gallery">Gallery</Link>
+                    </li>
+                    {/* <li
                           className={`"scrollToLink " ${
                             location.pathname.includes("/admin") &&
                             " text-white"
@@ -208,7 +213,7 @@ const Navbar = () => {
                         >
                           <Link to="/admin">Settings</Link>
                         </li> */}
-                      </ul>
+                  </ul>
                 </nav>
               </div>
             </div>
@@ -232,33 +237,35 @@ const Navbar = () => {
               </a>
             </div>
             <div className="menu-outer">
-            <ul className="navigation clearfix mainmenu one-page-scroll-menu">
-                        <li className="scrollToLink">
-                          <Link to={"/"} className="home-icon" href="#banner">
-                            <span className="hometext">Home</span>
-                            <span className="flaticon-real-estate homeicon" />
-                          </Link>
-                        </li>
-                        <li className="scrollToLink">
-                          <Link to={"/about"}>About</Link>
-                        </li>
-                        <li
-                          className={`"scrollToLink " ${
-                            location.pathname.includes("/portfolio") &&
-                            " text-white"
-                          }`}
-                        >
-                          <Link to="/portfolio">Portfolios</Link>
-                        </li>
-                        <li
-                          className={`"scrollToLink " ${
-                            location.pathname.includes("/gallery") &&
-                            " text-white"
-                          }`}
-                        >
-                          <Link to="/gallery">Gallery</Link>
-                        </li>
-                        {/* <li
+              <ul className="navigation clearfix mainmenu one-page-scroll-menu">
+                <li className="scrollToLink">
+                  <Link to={"/"} className="home-icon" href="#banner">
+                    <span className="hometext">Home</span>
+                    <span className="flaticon-real-estate homeicon" />
+                  </Link>
+                </li>
+                <li
+                  className={`scrollToLink ${
+                    location.pathname.includes("/company") && " text-white"
+                  }`}
+                >
+                  <Link to={"/company"}>About</Link>
+                </li>
+                <li
+                  className={`scrollToLink ${
+                    location.pathname.includes("/portfolio") && " text-white"
+                  }`}
+                >
+                  <Link to="/portfolio">Portfolios</Link>
+                </li>
+                <li
+                  className={`scrollToLink ${
+                    location.pathname.includes("/gallery") && " text-white"
+                  }`}
+                >
+                  <Link to="/gallery">Gallery</Link>
+                </li>
+                {/* <li
                           className={`"scrollToLink " ${
                             location.pathname.includes("/admin") &&
                             " text-white"
@@ -266,7 +273,7 @@ const Navbar = () => {
                         >
                           <Link to="/admin">Settings</Link>
                         </li> */}
-                      </ul>
+              </ul>
             </div>
             {/*Social Links*/}
             <div className="social-links">

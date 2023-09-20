@@ -79,6 +79,12 @@ const Footer = () => {
                             <a href="#about">About Us</a>
                           </li>
                           <li>
+                            <a href="#contact">Contact Us</a>
+                          </li>
+                          <li>
+                            <Link to="/company">Company</Link>
+                          </li>
+                          <li>
                             <Link to="/portfolio">Portfolio</Link>
                           </li>
                           <li>
@@ -115,7 +121,7 @@ const Footer = () => {
                 <div className="single-footer-widget">
                   <div className="twitter-feed-box">
                     <h3>
-                      <p>Alata Ventures</p>
+                      <p>Alataventures</p>
                     </h3>
                     <span>Sep 7, 2023 10:00 AM</span>
                     <div className="border-box" />
