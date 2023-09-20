@@ -58,7 +58,7 @@ const Contact = () => {
             <div className="col-xl-7 col-lg-7 col-md-12 pb-5">
               <div className="contact-form">
                 <div className="title">
-                  <h3>Your project starts with a conversation. Contact us now, and let's begin building together</h3>
+                  <h3>Leave a reply</h3>
                 </div>
                 <div className="inner-box">
                   <form
@@ -218,8 +218,7 @@ const Contact = () => {
                 <div className="title">
                   <h3>Contact Info</h3>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum.
+                  Your project starts with a conversation. Contact us now, and let's begin building together.
                   </p>
                 </div>
                 <ul className="contact-us">

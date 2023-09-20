@@ -5,13 +5,22 @@ const PortfolioPage = () => {
   const [portfolios, setPortfolios] = useState([]);
   const [portfoliosToShow, setPortfoliosToShow] = useState([]);
 
+  const [page, setPage] = useState(1);
+  const [hasNext, setHasNext] = useState(true);
+  const [hasPrev, setHasPrev] = useState(true);
+
+  const POST_PER_PAGE = 6;
+
 
   const fetchPortfolios = async () => {
-    await getAllPortfolio().then((res) => {
+    await getAllPortfolio(page, POST_PER_PAGE).then((res) => {
       if (res?.status === 200) {
-        const datas = res.data.portfolioData;
-        setPortfolios(datas);
-        setPortfoliosToShow(datas);
+        const data = res?.data?.portfolioData?.data;
+        setPortfoliosToShow(data);
+        setPortfolios(data);
+        const count = res?.data?.portfolioData?.count.value;
+        setHasNext(POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count);
+        setHasPrev(POST_PER_PAGE * (page - 1) > 0);
       }
     });
   };
@@ -30,7 +39,7 @@ const PortfolioPage = () => {
 
   useEffect(() => {
     fetchPortfolios();
-  }, []);
+  }, [page]);
 
   
   return (
@@ -138,17 +147,23 @@ const PortfolioPage = () => {
 
               
           </div>
-          {/* <div className="row">
-            <div className="col-xl-12">
+          <div className="row">
+            <div className="col-xl-12 flex justify-center">
               <div className="all-portfolio-button text-center">
-                <p className="btn-one" >
-                  Our All Portfolio
-                  <span className="flaticon-next" />
-                </p>
+                <button disabled={!hasPrev} type="button" onClick={() => setPage(page - 1)} className="btn-one" >
+                  Prev
+                </button>
+              </div>
+
+              <div className="all-portfolio-button text-center">
+                <button disabled={!hasNext} type="button" onClick={() => setPage(page + 1)} className="btn-one" >
+                  Next
+                </button>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
+
       </section>
 
   

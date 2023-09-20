@@ -11,7 +11,7 @@ const Portfolio = () => {
       if (res?.status === 200) {
         const datas = res.data.portfolioData;
         setPortfolios(datas);
-        setPortfoliosToShow(datas);
+        setPortfoliosToShow(datas.slice(0, 6));
       }
     });
   };
@@ -20,7 +20,7 @@ const Portfolio = () => {
 
   const handleTabChange = (tabName) => {
     if (tabName === "ALL") {
-      setPortfoliosToShow(portfolios);
+      setPortfoliosToShow(portfolios.slice(0, 6));
     } else {
       setPortfoliosToShow(portfolios.filter((x) => x.status === tabName));
     }

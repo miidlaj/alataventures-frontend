@@ -110,7 +110,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                         <li className="scrollToLink">
-                          <a href="#about">About</a>
+                          <Link to="/about">About</Link>
                         </li>
                         <li
                           className={`"scrollToLink " ${
@@ -182,7 +182,7 @@ const Navbar = () => {
                           </Link>
                         </li>
                         <li className="scrollToLink">
-                          <a href="#about">About</a>
+                          <Link to={"/about"}>About</Link>
                         </li>
                         <li
                           className={`"scrollToLink " ${

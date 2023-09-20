@@ -12,22 +12,27 @@ const Portfolio = () => {
   const [deleteSelected, setDeleteSelected] = useState(null);
   const [deleteModal, setDeleteModal] = useState(false);
 
+  const [page, setPage] = useState(1);
+  const [hasNext, setHasNext] = useState(true);
+  const [hasPrev, setHasPrev] = useState(true);
 
-  const fetchPortfolios = () => {
+  const POST_PER_PAGE = 7;
+
+  React.useEffect(() => {
     setLoading(true);
-    getAllPortfolio().then((res) => {
-      console.log(res);
+    getAllPortfolio(page, POST_PER_PAGE).then((res) => {
       if (res?.status === 200) {
-        setPortfolios(res?.data?.portfolioData);
+        setPortfolios(res?.data?.portfolioData?.data);
+        const count = res?.data?.portfolioData?.count.value;
+        setHasNext(POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count);
+        console.log(POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count);
+        setHasPrev(POST_PER_PAGE * (page - 1) > 0);
       } else {
-        toast.error("Could not load portfolio data!", { id: 'toast'});
+        toast.error("Could not load portfolio data!", { id: "toast" });
       }
     });
     setLoading(false);
-  };
-  React.useEffect(() => {
-    fetchPortfolios();
-  }, []);
+  }, [page]);
 
   const [openModal, setOpenModal] = useState(false);
   const [selected, setSetselected] = useState({
@@ -67,24 +72,28 @@ const Portfolio = () => {
     setLoading(true);
     await deletePortfolio(portfolio._id).then((res) => {
       if (res?.status === 200) {
-        setPortfolios(portfolios.filter(x => x._id !== res?.data?.deletedPortfolio?._id));
-        toast.success(res?.data?.message, { id: 'toast'});
+        setPortfolios(
+          portfolios.filter((x) => x._id !== res?.data?.deletedPortfolio?._id)
+        );
+        toast.success(res?.data?.message, { id: "toast" });
       } else {
-        toast.error(res?.data?.messag || 'Internal Server Error!', { id: 'toast'});
+        toast.error(res?.data?.messag || "Internal Server Error!", {
+          id: "toast",
+        });
       }
-    })
+    });
 
     setLoading(false);
-  }
+  };
 
   const handleDeleteModal = (portfolio) => {
     setDeleteModal(true);
     setDeleteSelected(portfolio);
-  }
+  };
   const handleCancelDelete = () => {
     setDeleteModal(false);
     setDeleteSelected(null);
-  }
+  };
 
   const handleNewPortfolioModal = () => {
     setSetselected({
@@ -101,8 +110,15 @@ const Portfolio = () => {
   return (
     <>
       {loading && <Loader />}
-      <ToasterComponent/>
-      {deleteModal && deleteSelected !== null && <DeleteModal handleCancel={handleCancelDelete} entity={'Portfolio'} handleDelete={handleDelete} data={deleteSelected}/>}
+      <ToasterComponent />
+      {deleteModal && deleteSelected !== null && (
+        <DeleteModal
+          handleCancel={handleCancelDelete}
+          entity={"Portfolio"}
+          handleDelete={handleDelete}
+          data={deleteSelected}
+        />
+      )}
       <div className="flex-1 px-2 sm:px-0 min-h-screen">
         <Modal
           openModal={openModal}
@@ -206,7 +222,10 @@ const Portfolio = () => {
                 </p>
 
                 <div className="absolute top-0 right-2">
-                  <button onClick={() => handleDeleteModal(portfolio)} className="inline-flex items-center px-2 py-2 bg-transparent hover:bg-red-700 hover:text-white transition duration-300 ease-in-out text-red-700 text-sm font-medium rounded-md">
+                  <button
+                    onClick={() => handleDeleteModal(portfolio)}
+                    className="inline-flex items-center px-2 py-2 bg-transparent hover:bg-red-700 hover:text-white transition duration-300 ease-in-out text-red-700 text-sm font-medium rounded-md"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5"
@@ -221,11 +240,30 @@ const Portfolio = () => {
                         d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
                       />
                     </svg>
-                    
                   </button>
                 </div>
               </div>
             ))}
+        </div>
+
+        <div className="px-5 py-5 flex flex-col xs:flex-row items-center xs:justify-between">
+         
+          <div className="inline-flex mt-2 xs:mt-0">
+            <button
+              disabled={!hasPrev}
+              onClick={() => setPage(page - 1)}
+              className="text-sm bg-gray-900 hover:bg-gray-400 disabled:bg-gray-500 text-white/75 font-semibold py-2 px-4 rounded-l"
+            >
+              Prev
+            </button>
+            <button
+              disabled={!hasNext}
+              onClick={() => setPage(page + 1)}
+              className="text-sm bg-gray-900 hover:bg-gray-400 disabled:bg-gray-500 text-white/75 font-semibold py-2 px-4 rounded-r"
+            >
+              Next
+            </button>
+          </div>
         </div>
       </div>
     </>

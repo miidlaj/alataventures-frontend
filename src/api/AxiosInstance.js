@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 export const AxiosAdmin = axios.create({
-    // baseURL: 'http://localhost:8000',
-    baseURL: 'https://www.api.alataventures.com',
+    baseURL: 'http://localhost:8000',
+    // baseURL: 'https://www.api.alataventures.com',
 });
 
 AxiosAdmin.interceptors.request.use(function (config) {

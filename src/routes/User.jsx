@@ -5,6 +5,7 @@ import GalleryPage from "../pages/GalleryPage";
 import Navbar from "../componets/Navbar";
 import PortfolioPage from "../pages/PortfolioPage";
 import Footer from "../componets/Footer";
+import AboutPage from "../pages/AboutPage";
 
 const User = () => {
 
@@ -20,6 +21,7 @@ const User = () => {
         <Routes>
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/*" element={<Home />} />
         </Routes>
 

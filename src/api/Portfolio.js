@@ -1,8 +1,8 @@
 import { AxiosAdmin } from "./AxiosInstance"
 
-export const getAllPortfolio = async () => {
+export const getAllPortfolio = async (page, pageSize) => {
     try {
-        const response = await AxiosAdmin.get('/portfolio')
+        const response = await AxiosAdmin.get(`/portfolio?page=${page}&pageSize=${pageSize}`)
         return response
     } catch (error) {
         return error?.response
@@ -11,7 +11,7 @@ export const getAllPortfolio = async () => {
 
 export const getLatestPortfolio = async () => {
     try {
-        const response = await AxiosAdmin.get('/portfolio/latest')
+        const response = await AxiosAdmin.get(`/portfolio/latest`)
         return response
     } catch (error) {
         return error?.response

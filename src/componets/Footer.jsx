@@ -27,10 +27,8 @@ const Footer = () => {
                     </div>
                     <div className="text">
                       <p>
-                        Proin tempus, enim lobortis placerat porta, libero
-                        mauris feugiat magna, ut lobortis justo tortor a ipsum.
-                        Proin luctus posuere eros porttitor euismod. Praesent
-                        pulvinar.
+                        Building Dreams, Crafting Excellence. Alata Ventures -
+                        Your Trusted Construction Partner
                       </p>
                     </div>
                     <div className="footer-social-links">
