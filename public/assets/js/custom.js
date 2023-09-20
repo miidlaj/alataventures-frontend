@@ -31,6 +31,7 @@
 window.onload = AllFunc;
 
 function AllFunc() {
+  console.log("Reere");
   // Main Slider Carousel
   if ($(".banner-carousel").length) {
     $(".banner-carousel").owlCarousel({
@@ -429,6 +430,7 @@ jQuery(window).on("scroll", function () {
 // Instance Of Fuction while Window Load event
 jQuery(window).on("load", function () {
   (function ($) {
+    AllFunc();
     prealoader();
     // projectMasonaryLayout();
     sortableMasonry();
@@ -612,12 +614,12 @@ function timepicker() {
   }
 }
 
-// // ===Prealoder===
-// function prealoader() {
-//   if ($(".preloader").length) {
-//     $(".preloader").delay(200).fadeOut(500);
-//   }
-// }
+// ===Prealoder===
+function prealoader() {
+  // if ($(".preloader").length) {
+  //   $(".preloader").delay(200).fadeOut(500);
+  // }
+}
 
 //  Fact counter
 function CounterNumberChanger() {
