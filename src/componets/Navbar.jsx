@@ -232,7 +232,41 @@ const Navbar = () => {
               </a>
             </div>
             <div className="menu-outer">
-              {/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}
+            <ul className="navigation clearfix mainmenu one-page-scroll-menu">
+                        <li className="scrollToLink">
+                          <Link to={"/"} className="home-icon" href="#banner">
+                            <span className="hometext">Home</span>
+                            <span className="flaticon-real-estate homeicon" />
+                          </Link>
+                        </li>
+                        <li className="scrollToLink">
+                          <Link to={"/about"}>About</Link>
+                        </li>
+                        <li
+                          className={`"scrollToLink " ${
+                            location.pathname.includes("/portfolio") &&
+                            " text-white"
+                          }`}
+                        >
+                          <Link to="/portfolio">Portfolios</Link>
+                        </li>
+                        <li
+                          className={`"scrollToLink " ${
+                            location.pathname.includes("/gallery") &&
+                            " text-white"
+                          }`}
+                        >
+                          <Link to="/gallery">Gallery</Link>
+                        </li>
+                        {/* <li
+                          className={`"scrollToLink " ${
+                            location.pathname.includes("/admin") &&
+                            " text-white"
+                          }`}
+                        >
+                          <Link to="/admin">Settings</Link>
+                        </li> */}
+                      </ul>
             </div>
             {/*Social Links*/}
             <div className="social-links">
