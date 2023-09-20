@@ -612,12 +612,12 @@ function timepicker() {
   }
 }
 
-// ===Prealoder===
-function prealoader() {
-  if ($(".preloader").length) {
-    $(".preloader").delay(200).fadeOut(500);
-  }
-}
+// // ===Prealoder===
+// function prealoader() {
+//   if ($(".preloader").length) {
+//     $(".preloader").delay(200).fadeOut(500);
+//   }
+// }
 
 //  Fact counter
 function CounterNumberChanger() {

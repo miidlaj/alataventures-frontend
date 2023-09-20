@@ -13,6 +13,7 @@ const User = () => {
   return (
     <>
       <div className="boxed_wrapper">
+        <div className="preloader" />
 
         {/* main header */}
         <Navbar />
