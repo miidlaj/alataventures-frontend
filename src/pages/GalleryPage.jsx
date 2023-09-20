@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-
 import "./GalleryPage.css";
 import { getAllImagees } from "../api/Gallery";
-import { Toaster, toast } from "react-hot-toast";
 
 const GalleryPage = () => {
   const [images, setImages] = useState([]);
@@ -12,9 +10,7 @@ const GalleryPage = () => {
     getAllImagees().then((res) => {
       if (res?.status === 200) {
         setImages(res?.data?.imageData);
-        toast.success(res?.data?.message);
       } else {
-        toast.error(res?.data?.message);
       }
     });
   };
@@ -27,31 +23,7 @@ const GalleryPage = () => {
   
   return (
     <>
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
-        gutter={8}
-        containerClassName=""
-        containerStyle={{}}
-        toastOptions={{
-          // Define default options
-          className: "",
-          duration: 5000,
-          style: {
-            background: "#363636",
-            color: "#fff",
-          },
-
-          // Default options for specific types
-          success: {
-            duration: 3000,
-            theme: {
-              primary: "green",
-              secondary: "black",
-            },
-          },
-        }}
-      />
+    
       <section className="portfolio-section" id="portfolio" style={{marginTop: "200px"}}>
         <div className="container-fluid">
         <div className="sec-title text-center">
