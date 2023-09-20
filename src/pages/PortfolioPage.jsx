@@ -39,6 +39,7 @@ const PortfolioPage = () => {
 
   useEffect(() => {
     fetchPortfolios();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   
