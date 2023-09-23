@@ -15,12 +15,18 @@ const Portfolio = () => {
   const [page, setPage] = useState(1);
   const [hasNext, setHasNext] = useState(true);
   const [hasPrev, setHasPrev] = useState(true);
+  const [tab, setTab] = useState("ALL");
+
+  const handleTabChange = async (tabName) => {
+    setPage(1);
+    setTab(tabName);
+  };
 
   const POST_PER_PAGE = 7;
 
   React.useEffect(() => {
     setLoading(true);
-    getAllPortfolio(page, POST_PER_PAGE).then((res) => {
+    getAllPortfolio(page, POST_PER_PAGE, tab).then((res) => {
       if (res?.status === 200) {
         setPortfolios(res?.data?.portfolioData?.data);
         const count = res?.data?.portfolioData?.count.value;
@@ -32,7 +38,7 @@ const Portfolio = () => {
       }
     });
     setLoading(false);
-  }, [page]);
+  }, [page, tab]);
 
   const [openModal, setOpenModal] = useState(false);
   const [selected, setSetselected] = useState({
@@ -165,6 +171,57 @@ const Portfolio = () => {
             </p>
           </div>
         </div>
+
+        <div className="text-md">
+          <nav className="flex flex-col sm:flex-row">
+            <button
+              onClick={() => handleTabChange("ALL")}
+              className={`text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none  ${
+                tab === "ALL" &&
+                "text-blue-500 border-b-2 font-medium border-blue-500"
+              }`}
+            >
+              ALL
+            </button>
+            <button
+              onClick={() => handleTabChange("EXECUTED")}
+              className={`text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none  ${
+                tab === "EXECUTED" &&
+                "text-blue-500 border-b-2 font-medium border-blue-500"
+              }`}
+            >
+              EXECUTED
+            </button>
+            <button
+              onClick={() => handleTabChange("ONGOING")}
+              className={`text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none  ${
+                tab === "ONGOING" &&
+                "text-blue-500 border-b-2 font-medium border-blue-500"
+              }`}
+            >
+              ONGOING
+            </button>
+            <button
+              onClick={() => handleTabChange("YET_TO_COMMENCE")}
+              className={`text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none  ${
+                tab === "YET_TO_COMMENCE" &&
+                "text-blue-500 border-b-2 font-medium border-blue-500"
+              }`}
+            >
+              YET TO COMMENCE
+            </button>
+            <button
+              onClick={() => handleTabChange("UPCOMING")}
+              className={`text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none  ${
+                tab === "UPCOMING" &&
+                "text-blue-500 border-b-2 font-medium border-blue-500"
+              }`}
+            >
+              UPCOMING
+            </button>
+          </nav>
+        </div>
+
         <div className="mb-10 sm:mb-0 mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div
             onClick={() => handleNewPortfolioModal()}
@@ -247,7 +304,6 @@ const Portfolio = () => {
         </div>
 
         <div className="px-5 py-5 flex flex-col xs:flex-row items-center xs:justify-between">
-         
           <div className="inline-flex mt-2 xs:mt-0">
             <button
               disabled={!hasPrev}

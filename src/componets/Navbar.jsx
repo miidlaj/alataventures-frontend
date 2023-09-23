@@ -121,7 +121,7 @@ const Navbar = () => {
                             " text-white"
                           }`}
                         >
-                          <Link to="/portfolio">Portfolios</Link>
+                          <Link to="/portfolio">Portfolio</Link>
                         </li>
                         <li
                           className={`scrollToLink ${
@@ -196,7 +196,7 @@ const Navbar = () => {
                         " text-white"
                       }`}
                     >
-                      <Link to="/portfolio">Portfolios</Link>
+                      <Link to="/portfolio">Portfolio</Link>
                     </li>
                     <li
                       className={`scrollToLink ${
@@ -256,7 +256,7 @@ const Navbar = () => {
                     location.pathname.includes("/portfolio") && " text-white"
                   }`}
                 >
-                  <Link to="/portfolio">Portfolios</Link>
+                  <Link to="/portfolio">Portfolio</Link>
                 </li>
                 <li
                   className={`scrollToLink ${

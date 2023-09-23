@@ -7,7 +7,7 @@ const Footer = () => {
       <footer className="footer-area">
         <div className="footer">
           <div className="container">
-            <div className="row">
+            <div className="row justify-center">
               {/*Start single footer widget*/}
               <div
                 className="col-xl-3 col-lg-3 col-md-12 col-sm-12 wow animated fadeInUp"
@@ -31,7 +31,7 @@ const Footer = () => {
                         Your Trusted Construction Partner
                       </p>
                     </div>
-                    <div className="footer-social-links">
+                    {/* <div className="footer-social-links">
                       <ul className="social-links-style1">
                         <li>
                           <a href="www.facebook.com" target="_blank">
@@ -54,13 +54,13 @@ const Footer = () => {
                           </a>
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
               {/*End single footer widget*/}
               {/*Start single footer widget*/}
-              <div
+              {/* <div
                 className="col-xl-4 col-lg-4 col-md-9 col-sm-12 wow animated fadeInUp"
                 data-wow-delay="0.5s"
               >
@@ -76,10 +76,10 @@ const Footer = () => {
                             <Link to="/">Home</Link>
                           </li>
                           <li>
-                            <a href="#about">About Us</a>
+                            <a href="#about">About</a>
                           </li>
                           <li>
-                            <a href="#contact">Contact Us</a>
+                            <a href="#contact">Contact</a>
                           </li>
                           <li>
                             <Link to="/company">Company</Link>
@@ -93,7 +93,7 @@ const Footer = () => {
                         </ul>
                       </div>
                       <div className="col-xl-6 col-lg-6 col-md-6">
-                        {/* <ul className="page-links">
+                        <ul className="page-links">
                           <li>
                             <Link to="/">Home</Link>
                           </li>
@@ -106,15 +106,15 @@ const Footer = () => {
                           <li>
                             <Link to="/gallery">Gallery</Link>
                           </li>
-                        </ul> */}
+                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/*End single footer widget*/}
               {/*Start single footer widget*/}
-              <div
+              {/* <div
                 className="col-xl-5 col-lg-5 col-md-12 col-sm-12 wow animated fadeInUp"
                 data-wow-delay="0.7s"
               >
@@ -138,7 +138,7 @@ const Footer = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/*End single footer widget*/}
             </div>
           </div>
@@ -148,21 +148,30 @@ const Footer = () => {
             <div className="outer-box">
               <div className="copyright-text">
                 <p>
-                  Copyright© All Rights Reserved <a href="/">alata ventures.</a>
+                  Copyright© All Rights Reserved <a href="/">Alataventures 2023.</a>
                 </p>
               </div>
               <div className="footer-menu">
-                {/* <ul>
-                  <li>
-                    <a href="/">Career</a>
-                  </li>
-                  <li>
-                    <a href="/">Terms of service</a>
-                  </li>
-                  <li>
-                    <a href="/">Refund policy</a>
-                  </li>
-                </ul> */}
+              <ul className="page-links flex justify-between">
+                          <li>
+                            <Link to="/">Home</Link>
+                          </li>
+                          <li>
+                            <a href="#about">About</a>
+                          </li>
+                          <li>
+                            <a href="#contact">Contact</a>
+                          </li>
+                          <li>
+                            <Link to="/company">Company</Link>
+                          </li>
+                          <li>
+                            <Link to="/portfolio">Portfolio</Link>
+                          </li>
+                          <li>
+                            <Link to="/gallery">Gallery</Link>
+                          </li>
+                        </ul>
               </div>
             </div>
           </div>

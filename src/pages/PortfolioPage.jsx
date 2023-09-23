@@ -3,7 +3,6 @@ import { getAllPortfolio } from "../api/Portfolio";
 
 const PortfolioPage = () => {
   const [portfolios, setPortfolios] = useState([]);
-  const [portfoliosToShow, setPortfoliosToShow] = useState([]);
 
   const [page, setPage] = useState(1);
   const [hasNext, setHasNext] = useState(true);
@@ -12,13 +11,12 @@ const PortfolioPage = () => {
   const POST_PER_PAGE = 6;
 
 
-  const fetchPortfolios = async () => {
-    await getAllPortfolio(page, POST_PER_PAGE).then((res) => {
+  const fetchPortfolios = async (type) => {
+    await getAllPortfolio(page, POST_PER_PAGE, type).then((res) => {
       if (res?.status === 200) {
         const data = res?.data?.portfolioData?.data;
-        setPortfoliosToShow(data);
         setPortfolios(data);
-        const count = res?.data?.portfolioData?.count.value;
+        const count = res?.data?.portfolioData?.count?.value;
         setHasNext(POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count);
         setHasPrev(POST_PER_PAGE * (page - 1) > 0);
       }
@@ -27,20 +25,15 @@ const PortfolioPage = () => {
 
   const [tab, setTab] = useState('ALL')
 
-  const handleTabChange = (tabName) => {
-    if (tabName === 'ALL') {
-      setPortfoliosToShow(portfolios);
-    } else {
-      setPortfoliosToShow(portfolios.filter(x => x.status === tabName))
-    }
-    setTab(tabName)
+  const handleTabChange = async (tabName) => {
+    setPage(1);
+    setTab(tabName);
   }
-
-
+  
   useEffect(() => {
-    fetchPortfolios();
+    fetchPortfolios(tab);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]);
+  }, [page, tab]);
 
   
   return (
@@ -101,7 +94,7 @@ const PortfolioPage = () => {
             </div>
           </div>
           <div className="row filter-layout masonary-layout">
-            {portfoliosToShow.length !== 0 && portfoliosToShow.map((item) => (
+            {portfolios.length !== 0 && portfolios.map((item) => (
                   <div
                     key={item._id}
                     className={`col-xl-4 col-lg-6 col-md-6`}

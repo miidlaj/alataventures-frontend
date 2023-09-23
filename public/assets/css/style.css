@@ -3821,7 +3821,7 @@ select:focus {
 .footer{
     position: relative;
     display: block;
-    padding: 80px 0;
+    padding: 50px 0;
     z-index: 1;
 }
 .single-footer-widget {
