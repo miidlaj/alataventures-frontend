@@ -24,7 +24,7 @@ const Portfolio = () => {
 
   const POST_PER_PAGE = 7;
 
-  React.useEffect(() => {
+  const fetchPortfolios = () => {
     setLoading(true);
     getAllPortfolio(page, POST_PER_PAGE, tab).then((res) => {
       if (res?.status === 200) {
@@ -38,6 +38,10 @@ const Portfolio = () => {
       }
     });
     setLoading(false);
+  }
+  React.useEffect(() => {
+    fetchPortfolios();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, tab]);
 
   const [openModal, setOpenModal] = useState(false);
@@ -222,7 +226,7 @@ const Portfolio = () => {
           </nav>
         </div>
 
-        <div className="mb-10 sm:mb-0 mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="mb-10 sm:mb-0 mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 transition-opacity duration-300 ease-in-out transform scale-95">
           <div
             onClick={() => handleNewPortfolioModal()}
             className="group bg-gray-900/30 py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/40 hover:smooth-hover"
